@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.halcyon.file_manage.dao.MaterialsMapper">
+	<resultMap id="BaseResultMap"
+		type="com.halcyon.file_manage.model.Materials">
+		<!-- WARNING - @mbg.generated -->
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="uuid" jdbcType="VARCHAR" property="uuid" />
+		<result column="matde" jdbcType="VARCHAR" property="matde" />
+		<result column="matgr" jdbcType="VARCHAR" property="matgr" />
+		<result column="measu" jdbcType="VARCHAR" property="measu" />
+		<result column="matnr" jdbcType="INTEGER" property="matnr" />
+		<result column="remark" jdbcType="VARCHAR" property="remark" />
+		<result column="amount" jdbcType="INTEGER" property="amount" />
+	</resultMap>
+
+
+	<select id="selectWithConditionLike" resultMap="BaseResultMap"
+		parameterType="com.halcyon.file_manage.model.SearchType">
+		select uuid ,matde ,matgr ,measu ,matnr ,remark ,amount
+		from materials
+		where ${type} like CONCAT(CONCAT('%',#{condition}),'%') order by #{orderType} #{order}
+
+	</select>
+
+
+
+</mapper>
