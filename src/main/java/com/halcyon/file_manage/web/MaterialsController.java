@@ -7,14 +7,18 @@ import com.halcyon.file_manage.model.Materials;
 import com.halcyon.file_manage.model.SearchType;
 import com.halcyon.file_manage.service.MaterialsService;
 
-import tk.mybatis.mapper.entity.Condition;
-
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+
+import java.awt.TexturePaint;
 import java.util.List;
 
 /**
@@ -61,7 +65,16 @@ public class MaterialsController {
         return ResultGenerator.genSuccessResult(pageInfo);
     }
     
-    
+    @ApiOperation(value = "模糊查询资源",notes = "支持名称字段/支持一个字段排序" , httpMethod = "POST")
+//    @ApiImplicitParam(
+//    		{
+//    			@ApiImplicitParam(name = "", value = "", required = true, dataType = "String"),
+//    			@ApiImplicitParam(name = "", value = "", required = true, dataType = "String"),
+//    			@ApiImplicitParam(name = "", value = "", required = true, dataType = "String"),
+//    			
+//    		}
+//    		
+//    		)
     @PostMapping("/search")
     public Result search(
     		Materials materials,
