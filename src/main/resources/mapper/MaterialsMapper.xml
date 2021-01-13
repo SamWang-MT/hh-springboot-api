@@ -17,7 +17,7 @@
 
 	<select id="selectWithConditionLike" resultMap="BaseResultMap"
 		parameterType="com.halcyon.file_manage.model.SearchType">
-		select uuid ,matde ,matgr ,measu ,matnr ,remark ,amount
+		select id, uuid ,matde ,matgr ,measu ,matnr ,remark ,amount
 		from materials
 		where ${type} like CONCAT(CONCAT('%',#{condition}),'%') order by #{orderType} #{order}
 

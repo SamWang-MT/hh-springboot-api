@@ -15,6 +15,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
+import com.halcyon.file_manage.annotations.AuthorityInterceptor;
 import com.halcyon.file_manage.core.Result;
 import com.halcyon.file_manage.core.ResultCode;
 import com.halcyon.file_manage.core.ServiceException;
@@ -107,6 +108,11 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 	// 添加拦截器
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
+		
+		// 注册权限拦截器
+	     registry.addInterceptor(new AuthorityInterceptor()).addPathPatterns("/api/**");
+		
+		
 		// 接口签名认证拦截器，该签名认证比较简单，实际项目中可以使用Json Web Token或其他更好的方式替代。
 		if (!"dev".equals(env)) { // 开发环境忽略签名认证
 			registry.addInterceptor(new HandlerInterceptorAdapter() {
@@ -129,6 +135,10 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 				}
 			});
 		}
+		
+	
+		
+		
 	}
 
 	private void responseResult(HttpServletResponse response, Result result) {

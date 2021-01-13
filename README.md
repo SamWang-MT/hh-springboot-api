@@ -1,7 +1,7 @@
 
 
-## 简介
-hh-springboot-api 是一个基于Spring Boot & MyBatis的种子项目，用于快速构建中小型API、RESTful API项目，已经有过多个真实项目的实践，稳定、简单、快速，使我们摆脱那些重复劳动，专注于业务代码的编写。下面是一个简单的使用演示，看如何基于本项目在短短几十秒钟内实现一套简单的API，并运行提供服务。
+## Introduction 
+HH-SpringBoot-API is a seed project based on Spring Boot & MyBatis, which is used to quickly build small and medium-sized API and RESTful API projects. It has been used in many real projects, which is stable, simple and fast, so that we can get rid of those repetitive work and focus on the writing of business code.Here's a simple usage demo of how to implement a simple set of APIs and run provisioning services based on this project in just a few dozen seconds.
 
 ## 特征&提供
 - 最佳实践的项目结构、配置文件、精简的POM

@@ -1,6 +1,8 @@
 package com.halcyon.file_manage.web;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.halcyon.file_manage.annotations.Authority;
+import com.halcyon.file_manage.annotations.SystemRole;
 import com.halcyon.file_manage.core.Result;
 import com.halcyon.file_manage.core.ResultGenerator;
 import com.halcyon.file_manage.model.Materials;
@@ -21,7 +23,7 @@ import java.util.List;
 * Created by CodeGenerator on 2021/01/09.
 */
 @RestController
-@RequestMapping("/materials")
+@RequestMapping("/api/materials")
 public class MaterialsController {
     @Resource
     private MaterialsService materialsService;
@@ -39,7 +41,9 @@ public class MaterialsController {
         materialsService.deleteById(id);
         return ResultGenerator.genSuccessResult();
     }
-
+    
+//  添加不同的权限 
+    @Authority(value = {SystemRole.ADMIN} )
     @SuppressWarnings("rawtypes")
 	@PostMapping("/update")
     public Result update(Materials materials) {
@@ -47,6 +51,7 @@ public class MaterialsController {
         return ResultGenerator.genSuccessResult();
     }
 
+    @Authority(value = {SystemRole.OPERATOR, SystemRole.ADMIN} )
     @SuppressWarnings("rawtypes")
 	@PostMapping("/detail")
     public Result detail(@RequestParam Integer id) {
