@@ -35,8 +35,15 @@ public class Chemicalwmstock {
     /**
      * 物料说明
      */
+    @Column(name = "Baseunit")
+    private String baseunit;
+    
+    /**
+     * 单位
+     */
     @Column(name = "Description")
     private String description;
+
 
     /**
      * @return id
@@ -52,7 +59,15 @@ public class Chemicalwmstock {
         this.id = id;
     }
 
-    /**
+    public String getBaseunit() {
+		return baseunit;
+	}
+
+	public void setBaseunit(String baseunit) {
+		this.baseunit = baseunit;
+	}
+
+	/**
      * 获取工厂
      *
      * @return Plant - 工厂

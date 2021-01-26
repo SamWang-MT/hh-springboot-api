@@ -32,10 +32,12 @@ public class StartAllJobInit {
 	@PostConstruct // 构造函数之后执行
 	public void init() {
 		System.out.println("容器启动后执行");
-		startJob();
+//		startJob();
 	}
 
 	public void startJob() {
+		System.out.println("startJob-REFRSH DB");
+		
 		List<Chemicalwmnotes> chemicalwmnotes = notesService.findAll();
 		Map<String, Chemicalwmnotes> materalMap = new HashMap<String, Chemicalwmnotes>();
 

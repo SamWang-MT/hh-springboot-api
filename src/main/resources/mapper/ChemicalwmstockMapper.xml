@@ -11,5 +11,6 @@
     <result column="MaterialNo" jdbcType="VARCHAR" property="materialno" />
     <result column="TotalQuantity" jdbcType="DECIMAL" property="totalquantity" />
     <result column="Description" jdbcType="VARCHAR" property="description" />
+    <result column="Baseunit" jdbcType="VARCHAR" property="baseunit" />
   </resultMap>
 </mapper>

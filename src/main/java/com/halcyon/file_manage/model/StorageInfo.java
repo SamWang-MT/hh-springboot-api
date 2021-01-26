@@ -41,6 +41,7 @@ public class StorageInfo extends Chemicalwmstock {
 		this.setMaterialno(stock.getMaterialno());
 		this.setPlant(stock.getPlant());
 		this.setDescription(stock.getDescription());
+		this.setBaseunit(stock.getBaseunit());
 
 		this.chemicalBrand = chemicalBrand;
 		this.dOCLink = dOCLink;
@@ -54,6 +55,8 @@ public class StorageInfo extends Chemicalwmstock {
 		this.setMaterialno(stock.getMaterialno());
 		this.setPlant(stock.getPlant());
 		this.setDescription(stock.getDescription());
+		this.setTotalquantity(stock.getTotalquantity());
+		this.setBaseunit(stock.getBaseunit());
 		if (materal !=  null) {
 			this.chemicalBrand = materal.getChemicalbrand();
 			this.dOCLink = materal.getDoclink();

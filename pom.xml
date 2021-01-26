@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.halcyonchina</groupId>
-	<artifactId>file-manager-api</artifactId>
+	<artifactId>ats-warehouse-manager</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
@@ -121,9 +121,21 @@
 			<version>3.2.0</version> </dependency> -->
 		<!-- hutool -->
 
-		<dependency>
+	<!-- 	<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
+			<version>5.5.7</version>
+		</dependency> -->
+		
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-core</artifactId>
+			<version>5.5.7</version>
+		</dependency>
+		
+			<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-poi</artifactId>
 			<version>5.5.7</version>
 		</dependency>
 		
