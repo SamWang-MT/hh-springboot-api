@@ -1,0 +1,64 @@
+package com.halcyon.file_manage.model;
+
+import java.util.Map;
+
+public class StorageInfo extends Chemicalwmstock {
+
+	/*
+	 * "storageBin": "41-01-001", = "materalNo": "10000001",= "chemicalBrand": ""，!
+	 * "baseUnit": "Kg", "totalQuantity": 123.230,=
+	 * "description":" description- descriptions",=
+	 * "dOCLink":"127.0.0.1:8080/chemical/3.html";!
+	 */
+
+	private String chemicalBrand;
+	private String dOCLink;
+
+	public String getChemicalBrand() {
+		return chemicalBrand;
+	}
+
+	public void setChemicalBrand(String chemicalBrand) {
+		this.chemicalBrand = chemicalBrand;
+	}
+
+	public String getdOCLink() {
+		return dOCLink;
+	}
+
+	public void setdOCLink(String dOCLink) {
+		this.dOCLink = dOCLink;
+	}
+
+	public StorageInfo() {
+		super();
+	}
+
+	public StorageInfo(Chemicalwmstock stock, String chemicalBrand, String dOCLink) {
+		super();
+		this.setId(stock.getId());
+		this.setStoragebin(stock.getStoragebin());
+		this.setMaterialno(stock.getMaterialno());
+		this.setPlant(stock.getPlant());
+		this.setDescription(stock.getDescription());
+
+		this.chemicalBrand = chemicalBrand;
+		this.dOCLink = dOCLink;
+	}
+
+	public StorageInfo(Chemicalwmstock stock, Chemicalwmnotes materal) {
+		super();
+
+		this.setId(stock.getId());
+		this.setStoragebin(stock.getStoragebin());
+		this.setMaterialno(stock.getMaterialno());
+		this.setPlant(stock.getPlant());
+		this.setDescription(stock.getDescription());
+		if (materal !=  null) {
+			this.chemicalBrand = materal.getChemicalbrand();
+			this.dOCLink = materal.getDoclink();
+		}
+
+	}
+
+}
