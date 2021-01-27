@@ -37,10 +37,9 @@ public class StorageController {
 		}
 
 		List<Shelf> list = materialService.listSelfByStorageId(storageId.trim());
-		PageInfo<Shelf> pageInfo = null;
-
-		pageInfo = new PageInfo<Shelf>(list);
-
-		return ResultGenerator.genSuccessResult(pageInfo);
+		/*
+		 * PageInfo<Shelf> pageInfo = null; pageInfo = new PageInfo<Shelf>(list);
+		 */
+		return ResultGenerator.genSuccessResult(list);
 	}
 }

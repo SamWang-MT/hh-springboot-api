@@ -6,7 +6,7 @@
 
 	<groupId>com.halcyonchina</groupId>
 	<artifactId>ats-warehouse-manager</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 	<packaging>jar</packaging>
 
 	<properties>

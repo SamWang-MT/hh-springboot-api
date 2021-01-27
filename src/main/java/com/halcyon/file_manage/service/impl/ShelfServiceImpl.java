@@ -10,6 +10,7 @@ import com.halcyon.file_manage.core.AbstractService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -28,14 +29,17 @@ public class ShelfServiceImpl extends AbstractService<Shelf> implements ShelfSer
 	public List<Shelf> findBinStartWith(String shelfBin) {
 
 		List<Shelf> findAll = findAll();
-		Iterator<Shelf> iterator = findAll.iterator();
-		while (iterator.hasNext()) {
-			Shelf self = iterator.next();
-			if (!StrUtil.startWith(self.getShelfbin(), shelfBin)) {
-				iterator.remove();
+		List<Shelf> rt_listList = new ArrayList<Shelf>();
+
+//		Iterator<Shelf> iterator = findAll.iterator();
+		for (Shelf shelf : findAll) {
+			String shelfbin2 = shelf.getShelfbin();
+			
+			if (StrUtil.startWith(shelfbin2, shelfBin)) {
+				rt_listList.add(shelf);
 			}
 		}
-		return findAll;
+		return rt_listList;
 
 	}
 

@@ -51,14 +51,6 @@ public class ShelfController {
 		}   	
     	
         List<Shelf> list = shelfService.findBinStartWith(shelfBin);
-        PageInfo<Shelf> pageInfo = null;
-        if (page == 0 ||size == 0 ) {
-        	pageInfo  = new PageInfo<Shelf>(list);
-		}else {
-			pageInfo = PageInfoUtils.list2PageInfo(list, page, size);
-			
-		}
-        
-        return ResultGenerator.genSuccessResult(pageInfo);
+        return ResultGenerator.genSuccessResult(list,page,size);
     }
 }

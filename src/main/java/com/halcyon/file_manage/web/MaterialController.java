@@ -29,7 +29,7 @@ public class MaterialController {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@PostMapping("/list")
-	public Result<PageInfo> list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size,
+	public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size,
 			@RequestParam String storageBin) {
 
 		if (StrUtil.isBlankIfStr(storageBin)) {
@@ -39,14 +39,14 @@ public class MaterialController {
 //		Page<Object> startPage = PageHelper.startPage(page, size);
 		List<StorageInfo> list = materialService.listMaterialsByStorageBin(storageBin.trim());
 //		startPage.add(list);
+		/*
         PageInfo<StorageInfo> pageInfo = null;
-        if (page == 0 ||size == 0 ) {
-        	pageInfo  = new PageInfo<StorageInfo>(list);
-		}else {
-			pageInfo = PageInfoUtils.list2PageInfo(list, page, size);
-			
-		}
-		return ResultGenerator.genSuccessResult(pageInfo);
+		 * if (page == 0 ||size == 0 ) { pageInfo = new PageInfo<StorageInfo>(list);
+		 * }else { pageInfo = PageInfoUtils.list2PageInfo(list, page, size);
+		 * 
+		 * }
+		 */
+		return ResultGenerator.genSuccessResult(list,page,size);
 	}
 
 }
