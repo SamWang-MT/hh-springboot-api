@@ -7,6 +7,8 @@ import java.util.Map;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import com.halcyon.file_manage.model.Chemicalwmnotes;
@@ -17,7 +19,7 @@ import com.halcyon.file_manage.service.ChemicalwmstockService;
 @Component // 注意 这里必须有
 public class StartAllJobInit {
 
-//    protected Logger logger = LoggerFactory.getLogger(getClass().getName());
+    protected Logger logger = LoggerFactory.getLogger(StartAllJobInit.class);
 //    @Autowired
 //    JobInfoService jobInfoService;
 //
@@ -31,13 +33,15 @@ public class StartAllJobInit {
 
 	@PostConstruct // 构造函数之后执行
 	public void init() {
-		System.out.println("容器启动后执行");
+		logger.info("spring boot started.");
+//		System.err.println("spring boot started.");
 //		startJob();
 	}
 
 	public void startJob() {
-		System.out.println("startJob-REFRSH DB");
-		
+//		System.out.println("startJob-REFRSH DB");
+		logger.warn("startJob-REFRSH DB.");
+
 		List<Chemicalwmnotes> chemicalwmnotes = notesService.findAll();
 		Map<String, Chemicalwmnotes> materalMap = new HashMap<String, Chemicalwmnotes>();
 

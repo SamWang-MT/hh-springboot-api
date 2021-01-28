@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.halcyon.file_manage.dao.StoragedetailMapper">
+  <resultMap id="BaseResultMap" type="com.halcyon.file_manage.model.Storagedetail">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="storageId" jdbcType="VARCHAR" property="storageid" />
+    <result column="storageName" jdbcType="VARCHAR" property="storagename" />
+    <result column="storageDetail" jdbcType="VARCHAR" property="storagedetail" />
+    <result column="mark" jdbcType="VARCHAR" property="mark" />
+  </resultMap>
+</mapper>

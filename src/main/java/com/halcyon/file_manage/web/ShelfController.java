@@ -37,7 +37,8 @@ public class ShelfController {
     	if (findById ==null  || !(findById.getShelfbin().trim().equals(shelf.getShelfbin()) ) ) {
     	return	ResultGenerator.genFailResult("请求参数异常");
 		}
-    	shelf.setMaxbin(null);
+//    	shelf.setShelfbin(null);
+//    	shelf.setMaxbin(null);
         shelfService.update(shelf);
         return ResultGenerator.genSuccessResult();
     }
