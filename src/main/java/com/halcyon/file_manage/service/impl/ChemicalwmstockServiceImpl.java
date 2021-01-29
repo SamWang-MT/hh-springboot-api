@@ -7,6 +7,8 @@ import com.halcyon.file_manage.core.AbstractService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 
@@ -18,5 +20,11 @@ import javax.annotation.Resource;
 public class ChemicalwmstockServiceImpl extends AbstractService<Chemicalwmstock> implements ChemicalwmstockService {
     @Resource
     private ChemicalwmstockMapper chemicalwmstockMapper;
+
+	@Override
+	public List<Chemicalwmstock> selectAll() {
+		// TODO Auto-generated method stub
+		return chemicalwmstockMapper.selectAll();
+	}
 
 }

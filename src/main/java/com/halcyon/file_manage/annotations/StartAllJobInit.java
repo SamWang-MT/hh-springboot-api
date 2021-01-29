@@ -38,11 +38,13 @@ public class StartAllJobInit {
 //		startJob();
 	}
 
+	@SuppressWarnings("unused")
 	public void startJob() {
 //		System.out.println("startJob-REFRSH DB");
-		logger.warn("startJob-REFRSH DB.");
-
-		List<Chemicalwmnotes> chemicalwmnotes = notesService.findAll();
+//		logger.warn("startJob-REFRSH DB.");
+		
+//		List<Chemicalwmnotes> chemicalwmnotes = notesService.findAll();
+		List<Chemicalwmnotes> chemicalwmnotes = notesService.selectAll();
 		Map<String, Chemicalwmnotes> materalMap = new HashMap<String, Chemicalwmnotes>();
 
 		for (Chemicalwmnotes material : chemicalwmnotes) {
@@ -51,7 +53,8 @@ public class StartAllJobInit {
 
 		StorageContainer.getContainer().refreshMateral(materalMap);
 
-		List<Chemicalwmstock> chemicalwmstock = stockService.findAll();
+//		List<Chemicalwmstock> chemicalwmstock = stockService.findAll();
+		List<Chemicalwmstock> chemicalwmstock = stockService.selectAll();
 		StorageContainer.getContainer().refreshStorage(chemicalwmstock);
 
 		StorageContainer container = StorageContainer.getContainer();

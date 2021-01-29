@@ -30,7 +30,7 @@ public class TimedTasks {
 	// 每秒递增运行 0,5,10,15
 //	  	 	@Scheduled(cron = "0/60 * * * * ?") //@Scheduled注解 表示此方法是一个定时任务方法
 	// 或直接指定时间间隔，例如：5秒
-	@Scheduled(fixedRate = 60000)
+	@Scheduled(fixedRate = 120000)
 	private void configureTasks() {
 //	       		System.err.println("正在执行定时任务，执行时间: " + LocalDateTime.now());
 		logger.warn("taskJob-REFRSH DB.");

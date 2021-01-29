@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.halcyon.file_manage.dao.StoragedetailMapper">
-  <resultMap id="BaseResultMap" type="com.halcyon.file_manage.model.Storagedetail">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="storageId" jdbcType="VARCHAR" property="storageid" />
-    <result column="storageName" jdbcType="VARCHAR" property="storagename" />
-    <result column="storageDetail" jdbcType="VARCHAR" property="storagedetail" />
-    <result column="mark" jdbcType="VARCHAR" property="mark" />
-  </resultMap>
+<mapper
+	namespace="com.halcyon.file_manage.dao.StoragedetailMapper">
+	<resultMap id="BaseResultMap"
+		type="com.halcyon.file_manage.model.Storagedetail">
+		<!-- WARNING - @mbg.generated -->
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="storageId" jdbcType="VARCHAR"
+			property="storageid" />
+		<result column="storageName" jdbcType="VARCHAR"
+			property="storagename" />
+		<result column="storageDetail" jdbcType="VARCHAR"
+			property="storagedetail" />
+		<result column="mark" jdbcType="VARCHAR" property="mark" />
+	</resultMap>
+
+	<select id="selectAll" resultMap="BaseResultMap">
+		select * from
+		local_sap_data.ChemicalWMStorageDetail
+		where 1=1 order by storageId
+	</select>
+
+
+	<select id="select4Id" resultMap="BaseResultMap"
+	parameterType="com.halcyon.file_manage.model.Storagedetail" >
+		select * from
+		local_sap_data.ChemicalWMStorageDetail
+		where id = #{id}
+	</select>
+
+
+	<update id="updateOne"
+		parameterType="com.halcyon.file_manage.model.Storagedetail">
+		update local_sap_data.ChemicalWMStorageDetail
+		<set>
+			<if test="storageid != null">
+				storageId = #{storageid,jdbcType=VARCHAR},
+			</if>
+			<if test="storagename != null">
+				storageName = #{storagename,jdbcType=VARCHAR},
+			</if>
+			<if test="storagedetail != null">
+				storageDetail = #{storagedetail,jdbcType=VARCHAR},
+			</if>
+			<if test="mark != null">
+				mark = #{mark,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+
+
+
 </mapper>

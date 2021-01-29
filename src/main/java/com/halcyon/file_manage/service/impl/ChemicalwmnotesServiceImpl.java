@@ -7,6 +7,8 @@ import com.halcyon.file_manage.core.AbstractService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 
@@ -19,4 +21,11 @@ public class ChemicalwmnotesServiceImpl extends AbstractService<Chemicalwmnotes>
     @Resource
     private ChemicalwmnotesMapper chemicalwmnotesMapper;
 
+	@Override
+	public List<Chemicalwmnotes> selectAll() {
+		// TODO Auto-generated method stub
+		return chemicalwmnotesMapper.selectAll();
+	}
+
+    
 }

@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.halcyon.file_manage.dao.ShelfMapper">
-  <resultMap id="BaseResultMap" type="com.halcyon.file_manage.model.Shelf">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="shelfBin" jdbcType="VARCHAR" property="shelfbin" />
-    <result column="shelfType" jdbcType="INTEGER" property="shelftype" />
-    <result column="shelfRow" jdbcType="INTEGER" property="shelfrow" />
-    <result column="shelfCol" jdbcType="INTEGER" property="shelfcol" />
-    <result column="maxBin" jdbcType="INTEGER" property="maxbin" />
-    <result column="mark" jdbcType="VARCHAR" property="mark" />
-  </resultMap>
+	<resultMap id="BaseResultMap"
+		type="com.halcyon.file_manage.model.Shelf">
+		<!-- WARNING - @mbg.generated -->
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="shelfBin" jdbcType="VARCHAR"
+			property="shelfbin" />
+		<result column="shelfType" jdbcType="INTEGER"
+			property="shelftype" />
+		<result column="shelfRow" jdbcType="INTEGER"
+			property="shelfrow" />
+		<result column="shelfCol" jdbcType="INTEGER"
+			property="shelfcol" />
+		<result column="maxBin" jdbcType="INTEGER" property="maxbin" />
+		<result column="mark" jdbcType="VARCHAR" property="mark" />
+	</resultMap>
+
+	<select id="selectAll" resultMap="BaseResultMap">
+		select * from
+		local_sap_data.ChemicalWMShelf
+		where 1=1 order by shelfBin
+	</select>
+	
+	<select id="select4Id" resultMap="BaseResultMap"
+	parameterType="com.halcyon.file_manage.model.Shelf" >
+		select * from
+		local_sap_data.ChemicalWMShelf
+		where id = #{id}
+	</select>
+
+
+	<update id="updateOne"
+		parameterType="com.halcyon.file_manage.model.Shelf">
+		update local_sap_data.ChemicalWMShelf
+		<set>
+			<if test="shelfbin != null">
+				shelfBin = #{shelfbin,jdbcType=VARCHAR},
+			</if>
+			<if test="shelftype != null">
+				shelfType = #{shelftype,jdbcType=INTEGER},
+			</if>
+			<if test="shelfrow != null">
+				shelfRow = #{shelfrow,jdbcType=INTEGER},
+			</if>
+			<if test="shelfcol != null">
+				shelfCol = #{shelfcol,jdbcType=INTEGER},
+			</if>
+			<if test="mark != null">
+				mark = #{mark,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+
+
+
+
 </mapper>

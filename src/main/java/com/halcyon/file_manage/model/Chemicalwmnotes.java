@@ -2,6 +2,7 @@ package com.halcyon.file_manage.model;
 
 import javax.persistence.*;
 
+//@Table(name = "local_sap_data.ChemicalWMNotes") 
 public class Chemicalwmnotes {
     /**
      * 物料号

@@ -33,13 +33,13 @@ public class ShelfController {
     	if (shelf == null || shelf.getId() == null | StrUtil.isBlankIfStr(shelf.getShelfbin())) {
     		ResultGenerator.genFailResult("请求参数不完整");
 		}
-    	Shelf findById = shelfService.findById(shelf.getId());
+    	Shelf findById = shelfService.select4Id(shelf);
     	if (findById ==null  || !(findById.getShelfbin().trim().equals(shelf.getShelfbin()) ) ) {
     	return	ResultGenerator.genFailResult("请求参数异常");
 		}
 //    	shelf.setShelfbin(null);
 //    	shelf.setMaxbin(null);
-        shelfService.update(shelf);
+        shelfService.updateOne(shelf);
         return ResultGenerator.genSuccessResult();
     }
 

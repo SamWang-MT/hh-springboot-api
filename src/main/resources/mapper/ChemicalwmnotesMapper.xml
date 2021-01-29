@@ -9,4 +9,11 @@
     <result column="ChemicalBrand" jdbcType="VARCHAR" property="chemicalbrand" />
     <result column="DOCLink" jdbcType="VARCHAR" property="doclink" />
   </resultMap>
+  
+  	<select id="selectAll" resultMap="BaseResultMap" >
+		select * from local_sap_data.ChemicalWMNotes
+		where  1=1  order by MaterialNo
+	</select>
+  
+  
 </mapper>

@@ -28,7 +28,7 @@ public class ShelfServiceImpl extends AbstractService<Shelf> implements ShelfSer
 	@Override
 	public List<Shelf> findBinStartWith(String shelfBin) {
 
-		List<Shelf> findAll = findAll();
+		List<Shelf> findAll = selectAll();
 		List<Shelf> rt_listList = new ArrayList<Shelf>();
 
 //		Iterator<Shelf> iterator = findAll.iterator();
@@ -41,6 +41,24 @@ public class ShelfServiceImpl extends AbstractService<Shelf> implements ShelfSer
 		}
 		return rt_listList;
 
+	}
+
+	@Override
+	public List<Shelf> selectAll() {
+		// TODO Auto-generated method stub
+		return shelfMapper.selectAll();
+	}
+
+	@Override
+	public void updateOne(Shelf shelf) {
+		// TODO Auto-generated method stub
+		shelfMapper.updateOne(shelf);
+	}
+
+	@Override
+	public Shelf select4Id(Shelf shelf) {
+		// TODO Auto-generated method stub
+		return shelfMapper.select4Id(shelf);
 	}
 
 }

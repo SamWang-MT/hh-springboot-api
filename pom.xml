@@ -6,7 +6,7 @@
 
 	<groupId>com.halcyonchina</groupId>
 	<artifactId>ats-warehouse-manager</artifactId>
-	<version>1.1</version>
+	<version>1.50</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -56,6 +56,13 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<!-- SQL SERVER 驱动 -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
 		<!--MyBatis 及 插件依赖 -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -121,25 +128,22 @@
 			<version>3.2.0</version> </dependency> -->
 		<!-- hutool -->
 
-	<!-- 	<dependency>
-			<groupId>cn.hutool</groupId>
-			<artifactId>hutool-all</artifactId>
-			<version>5.5.7</version>
-		</dependency> -->
-		
+		<!-- <dependency> <groupId>cn.hutool</groupId> <artifactId>hutool-all</artifactId> 
+			<version>5.5.7</version> </dependency> -->
+
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-core</artifactId>
 			<version>5.5.7</version>
 		</dependency>
-		
-			<dependency>
+
+		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-poi</artifactId>
 			<version>5.5.7</version>
 		</dependency>
-		
-			<!-- HUTOOL  EXCEL UITIL  -->
+
+		<!-- HUTOOL EXCEL UITIL -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>

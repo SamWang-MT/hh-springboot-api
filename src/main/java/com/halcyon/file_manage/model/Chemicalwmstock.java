@@ -2,7 +2,7 @@ package com.halcyon.file_manage.model;
 
 import java.math.BigDecimal;
 import javax.persistence.*;
-
+//@Table(name = "local_sap_data.ChemicalWMStock") 
 public class Chemicalwmstock {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

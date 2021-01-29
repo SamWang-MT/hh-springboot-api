@@ -18,10 +18,10 @@ import java.util.*;
  */
 public class CodeGenerator {
     //JDBC配置，请修改为你项目的实际配置
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/local_sap_data";
-    private static final String JDBC_USERNAME = "root";
-    private static final String JDBC_PASSWORD = "root1234";
-    private static final String JDBC_DIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
+    private static final String JDBC_URL = "jdbc:sqlserver://10.90.48.51:2071;DatabaseName=HR_CHINA";
+    private static final String JDBC_USERNAME = "wechatwrite";
+    private static final String JDBC_PASSWORD = "6XHm%Qrowrite";
+    private static final String JDBC_DIVER_CLASS_NAME = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 
     private static final String PROJECT_PATH = System.getProperty("user.dir");//项目在硬盘上的基础路径
     private static final String TEMPLATE_FILE_PATH = PROJECT_PATH + "/src/test/resources/generator/template";//模板位置
@@ -37,7 +37,7 @@ public class CodeGenerator {
     private static final String DATE = new SimpleDateFormat("yyyy/MM/dd").format(new Date());//@date
 
     public static void main(String[] args) {
-        genCode("StorageDetail");
+        genCode("ChemicalWMStock2");
         //genCodeByCustomModelName("输入表名","输入自定义Model名称");
     }
 
