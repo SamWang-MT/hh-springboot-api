@@ -133,6 +133,14 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>4.1.0</version>
 		</dependency>
+		
+		
+		<!--web service-->
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+            <version>3.3.2</version>
+        </dependency>
 
 	</dependencies>
 
@@ -161,6 +169,9 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		
+		
+		
 	</repositories>
 
 	<pluginRepositories>
