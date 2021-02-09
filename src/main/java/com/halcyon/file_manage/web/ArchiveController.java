@@ -62,13 +62,6 @@ public class ArchiveController {
 			@RequestParam(defaultValue = "0") Integer size) {
 		PageHelper.startPage(page, size);
 		List<Archive> list = archiveService.findAll();
-
-		/*
-		 * Condition condition = FM_SqlUtils.getCondition(Archive.class, "category_no",
-		 * "11","_category_name", "7"); List<Archive> findByCondition2 =
-		 * archiveService.findByCondition(condition );
-		 */
-
 		PageInfo pageInfo = new PageInfo(list);
 		return ResultGenerator.genSuccessResult(pageInfo);
 	}
@@ -85,8 +78,8 @@ public class ArchiveController {
 	 * @return
 	 */
 	@PostMapping("/search")
-	public Result search(@RequestParam(defaultValue = "1") Integer page,
-			@RequestParam(defaultValue = "1000") Integer size, @RequestParam(defaultValue = "0") String _fileId,
+	public Result search(@RequestParam(defaultValue = "0") Integer page,
+			@RequestParam(defaultValue = "0") Integer size, @RequestParam(defaultValue = "0") String _fileId,
 			@RequestParam(defaultValue = "0") String categoryNo,
 			@RequestParam(defaultValue = "0") String $archiveDate) {
 

@@ -59,19 +59,25 @@ public class ${modelNameUpperCamel}Controller {
     
     
 	/**
-	 * 自定查询
+	/**
+	 *  通用自定义查询
 	 * 
 	 * @param page
 	 * @param size
-	 * @param _file_id    模糊查询字段需要下划线开头，变量名同数据库格式 如“file_id”
-	 * @param category_no 普通字段
+	 * @param categoryNo   普通相等字段使用对象字段名
+	 * @param _fileId      模糊查询字段需要下划线开头
+	 * @param $archiveDate 范围查询$开头 范围查页面传入开始和结束值使用逗号拼接传入
+	 * 
 	 * @return
+	 */
 	@PostMapping("/search")
-	public Result search(@RequestParam(defaultValue = "1") Integer page,
-			@RequestParam(defaultValue = "1000") Integer size, @RequestParam(defaultValue = "") String _file_id,
-			@RequestParam(defaultValue = "") String category_no) {
-		
-		Condition condition = FM_SqlUtils.getCondition(${modelNameUpperCamel}.class, "_file_id", _file_id, "category_no", category_no);		
+	public Result search(@RequestParam(defaultValue = "0") Integer page,
+			@RequestParam(defaultValue = "0") Integer size, @RequestParam(defaultValue = "0") String _fileId,
+			@RequestParam(defaultValue = "0") String categoryNo,
+			@RequestParam(defaultValue = "0") String $archiveDate) {
+	
+		Condition condition = FM_SqlUtils.getCondition(${modelNameUpperCamel}.class, "_fileId", _fileId, "categoryNo", categoryNo,
+				"$archiveDate", $archiveDate);
 		PageHelper.startPage(page, size);
 		List<${modelNameUpperCamel}> list = ${modelNameLowerCamel}Service.findByCondition(condition);
 
