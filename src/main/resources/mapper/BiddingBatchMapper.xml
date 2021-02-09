@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.halcyon.file_manage.dao.BiddingBatchMapper">
+  <resultMap id="BaseResultMap" type="com.halcyon.file_manage.model.BiddingBatch">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="year" jdbcType="INTEGER" property="year" />
+    <result column="block" jdbcType="INTEGER" property="block" />
+    <result column="packages" jdbcType="INTEGER" property="packages" />
+    <result column="bidding_date" jdbcType="TIMESTAMP" property="biddingDate" />
+    <result column="bidding_month" jdbcType="INTEGER" property="biddingMonth" />
+    <result column="temp_shelf" jdbcType="VARCHAR" property="tempShelf" />
+    <result column="is_filed" jdbcType="CHAR" property="isFiled" />
+    <result column="is_on_shelf" jdbcType="CHAR" property="isOnShelf" />
+    <result column="plan_amount" jdbcType="INTEGER" property="planAmount" />
+    <result column="actual_amount" jdbcType="INTEGER" property="actualAmount" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="mark" jdbcType="VARCHAR" property="mark" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+  </resultMap>
+</mapper>

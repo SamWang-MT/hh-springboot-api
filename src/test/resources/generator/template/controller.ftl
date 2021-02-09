@@ -48,9 +48,37 @@ public class ${modelNameUpperCamel}Controller {
 
     @PostMapping("/list")
     public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size) {
+  
         PageHelper.startPage(page, size);
         List<${modelNameUpperCamel}> list = ${modelNameLowerCamel}Service.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
+             
     }
+    
+    
+    
+	/**
+	 * 自定查询
+	 * 
+	 * @param page
+	 * @param size
+	 * @param _file_id    模糊查询字段需要下划线开头，变量名同数据库格式 如“file_id”
+	 * @param category_no 普通字段
+	 * @return
+	@PostMapping("/search")
+	public Result search(@RequestParam(defaultValue = "1") Integer page,
+			@RequestParam(defaultValue = "1000") Integer size, @RequestParam(defaultValue = "") String _file_id,
+			@RequestParam(defaultValue = "") String category_no) {
+		
+		Condition condition = FM_SqlUtils.getCondition(${modelNameUpperCamel}.class, "_file_id", _file_id, "category_no", category_no);		
+		PageHelper.startPage(page, size);
+		List<${modelNameUpperCamel}> list = ${modelNameLowerCamel}Service.findByCondition(condition);
+
+		PageInfo pageInfo = new PageInfo(list);
+		return ResultGenerator.genSuccessResult(pageInfo);
+	}
+    
+	 */
+    
 }

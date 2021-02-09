@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.halcyon.file_manage.dao.BorrowerMapper">
+  <resultMap id="BaseResultMap" type="com.halcyon.file_manage.model.Borrower">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="borrower" jdbcType="VARCHAR" property="borrower" />
+    <result column="contactInfo" jdbcType="VARCHAR" property="contactinfo" />
+    <result column="borrower_dept" jdbcType="VARCHAR" property="borrowerDept" />
+    <result column="borrow_for" jdbcType="VARCHAR" property="borrowFor" />
+    <result column="borrow_from" jdbcType="TIMESTAMP" property="borrowFrom" />
+    <result column="return_time" jdbcType="TIMESTAMP" property="returnTime" />
+    <result column="file_admin" jdbcType="VARCHAR" property="fileAdmin" />
+    <result column="return_real" jdbcType="TIMESTAMP" property="returnReal" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="file_ids" jdbcType="VARCHAR" property="fileIds" />
+    <result column="file_tips" jdbcType="VARCHAR" property="fileTips" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="file_url" jdbcType="VARCHAR" property="fileUrl" />
+  </resultMap>
+</mapper>

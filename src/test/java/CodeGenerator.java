@@ -18,7 +18,7 @@ import java.util.*;
  */
 public class CodeGenerator {
     //JDBC配置，请修改为你项目的实际配置
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/blade_admin";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/file_manage";
     private static final String JDBC_USERNAME = "root";
     private static final String JDBC_PASSWORD = "root1234";
     private static final String JDBC_DIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
@@ -33,11 +33,11 @@ public class CodeGenerator {
     private static final String PACKAGE_PATH_SERVICE_IMPL = packageConvertPath(SERVICE_IMPL_PACKAGE);//生成的Service实现存放路径
     private static final String PACKAGE_PATH_CONTROLLER = packageConvertPath(CONTROLLER_PACKAGE);//生成的Controller存放路径
 
-    private static final String AUTHOR = "CodeGenerator";//@author
+    private static final String AUTHOR = "Merdader";//@author
     private static final String DATE = new SimpleDateFormat("yyyy/MM/dd").format(new Date());//@date
 
     public static void main(String[] args) {
-        genCode("materials");
+        genCode("bidding_batch");
         //genCodeByCustomModelName("输入表名","输入自定义Model名称");
     }
 

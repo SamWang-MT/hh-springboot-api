@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.halcyon.file_manage.dao.ShelfMapper">
+  <resultMap id="BaseResultMap" type="com.halcyon.file_manage.model.Shelf">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="warehouse_id" jdbcType="VARCHAR" property="warehouseId" />
+    <result column="warehouse_name" jdbcType="VARCHAR" property="warehouseName" />
+    <result column="shelf_id" jdbcType="VARCHAR" property="shelfId" />
+    <result column="shelf_type" jdbcType="VARCHAR" property="shelfType" />
+    <result column="shelf_file_type" jdbcType="VARCHAR" property="shelfFileType" />
+    <result column="shelf_row" jdbcType="INTEGER" property="shelfRow" />
+    <result column="shelf_col" jdbcType="INTEGER" property="shelfCol" />
+    <result column="is_shelf" jdbcType="CHAR" property="isShelf" />
+    <result column="storage_id" jdbcType="VARCHAR" property="storageId" />
+    <result column="is_empty" jdbcType="CHAR" property="isEmpty" />
+    <result column="width" jdbcType="INTEGER" property="width" />
+    <result column="remain_width" jdbcType="INTEGER" property="remainWidth" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="mark" jdbcType="VARCHAR" property="mark" />
+  </resultMap>
+</mapper>

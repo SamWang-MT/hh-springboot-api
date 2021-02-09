@@ -1,6 +1,9 @@
 package com.halcyon.file_manage.core;
 
 import org.apache.ibatis.exceptions.TooManyResultsException;
+
+import com.halcyon.file_manage.model.Archive;
+
 import tk.mybatis.mapper.entity.Condition;
 
 import java.util.List;
@@ -19,4 +22,8 @@ public interface Service<T> {
     List<T> findByIds(String ids);//通过多个ID查找//eg：ids -> “1,2,3,4”
     List<T> findByCondition(Condition condition);//根据条件查找
     List<T> findAll();//获取所有
+    List<T> selectLastLimt(); // 获取近期倒序
+  
+    
+    
 }

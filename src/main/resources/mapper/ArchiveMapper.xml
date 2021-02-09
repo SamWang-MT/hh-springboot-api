@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.halcyon.file_manage.dao.ArchiveMapper">
+  <resultMap id="BaseResultMap" type="com.halcyon.file_manage.model.Archive">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="year" jdbcType="INTEGER" property="year" />
+    <result column="category_no" jdbcType="VARCHAR" property="categoryNo" />
+    <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
+    <result column="archive_id" jdbcType="VARCHAR" property="archiveId" />
+    <result column="file_id" jdbcType="VARCHAR" property="fileId" />
+    <result column="archive_name" jdbcType="VARCHAR" property="archiveName" />
+    <result column="archive_limit" jdbcType="INTEGER" property="archiveLimit" />
+    <result column="archive_copies" jdbcType="INTEGER" property="archiveCopies" />
+    <result column="folder_size" jdbcType="INTEGER" property="folderSize" />
+    <result column="archive_date" jdbcType="TIMESTAMP" property="archiveDate" />
+    <result column="filing_group" jdbcType="VARCHAR" property="filingGroup" />
+    <result column="filling_person" jdbcType="VARCHAR" property="fillingPerson" />
+    <result column="filing_date" jdbcType="TIMESTAMP" property="filingDate" />
+    <result column="units_per_file" jdbcType="INTEGER" property="unitsPerFile" />
+    <result column="total_page" jdbcType="INTEGER" property="totalPage" />
+    <result column="folder_status" jdbcType="CHAR" property="folderStatus" />
+    <result column="borrow_status" jdbcType="CHAR" property="borrowStatus" />
+    <result column="destroyed_time" jdbcType="TIMESTAMP" property="destroyedTime" />
+    <result column="destroyed_mark" jdbcType="VARCHAR" property="destroyedMark" />
+    <result column="storage_id" jdbcType="VARCHAR" property="storageId" />
+    <result column="mark" jdbcType="VARCHAR" property="mark" />
+  </resultMap>
+</mapper>
