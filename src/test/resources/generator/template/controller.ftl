@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import tk.mybatis.mapper.entity.Condition;
+import com.halcyon.file_manage.tools.FM_SqlUtils;
+
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -58,7 +61,7 @@ public class ${modelNameUpperCamel}Controller {
     
     
     
-	/**
+	
 	/**
 	 *  通用自定义查询
 	 * 
@@ -70,6 +73,8 @@ public class ${modelNameUpperCamel}Controller {
 	 * 
 	 * @return
 	 */
+	 
+	/** 
 	@PostMapping("/search")
 	public Result search(@RequestParam(defaultValue = "0") Integer page,
 			@RequestParam(defaultValue = "0") Integer size, @RequestParam(defaultValue = "0") String _fileId,
