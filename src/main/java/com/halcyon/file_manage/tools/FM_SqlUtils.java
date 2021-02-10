@@ -3,6 +3,8 @@ package com.halcyon.file_manage.tools;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
+
 import com.alibaba.druid.sql.visitor.functions.If;
 import com.halcyon.file_manage.annotations.FM_Constants;
 import com.halcyon.file_manage.model.Archive;
@@ -24,7 +26,6 @@ public class FM_SqlUtils {
 	public static Map<String, Object> createQueryMap(String... arg) {
 		Map<String, Object> queryMap = new HashMap<String, Object>();
 		for (int i = 0; i < arg.length; i++) {
-				
 			queryMap.put(arg[i], arg[++i]);
 		}
 		return queryMap;
@@ -34,14 +35,32 @@ public class FM_SqlUtils {
 	 * 创建Condition
 	 * @param <E>
 	 * @param beanClass
-	 * @param arg
+	 * @param arg 
 	 * @return
 	 */
-	public static <E> Condition getCondition(Class<E> beanClass, String... arg){
+	public static <E> Condition getCondition(Class<E> beanClass, String[]arg){
 		
 		Map<String, Object> queryMap = createQueryMap(arg);
 		return createConditions(beanClass, queryMap);
 	}
+	
+	
+
+	/**
+	 * 创建Condition 
+	 * @param <E>
+	 * @param beanClass
+	 * @param arg
+	 * @param orderName
+	 * @param orderType
+	 * @return
+	 */
+	public static <E> Condition getConditionWithOrder(Class<E> beanClass, String[]arg,String orderName ,String orderType){
+		
+		Map<String, Object> queryMap = createQueryMap(arg);
+		return createConditions(beanClass, queryMap, orderName, orderType);
+	}
+	
 
 	/**
 	 * 
@@ -128,5 +147,8 @@ public class FM_SqlUtils {
 //		criteria.andCondition(key + " like ", "%"+ value + "%");
 		criteria.andLike(key, "%"+ value + "%");
 	}
+	
+	
+	
 
 }

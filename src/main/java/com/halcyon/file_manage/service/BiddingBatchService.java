@@ -4,7 +4,7 @@ import com.halcyon.file_manage.core.Service;
 
 
 /**
- * Created by Merdader on 2021/02/08.
+ * Created by Merdader on 2021/02/09.
  */
 public interface BiddingBatchService extends Service<BiddingBatch> {
 

@@ -81,8 +81,9 @@ public class ${modelNameUpperCamel}Controller {
 			@RequestParam(defaultValue = "0") String categoryNo,
 			@RequestParam(defaultValue = "0") String $archiveDate) {
 	
-		Condition condition = FM_SqlUtils.getCondition(${modelNameUpperCamel}.class, "_fileId", _fileId, "categoryNo", categoryNo,
-				"$archiveDate", $archiveDate);
+		Condition condition = FM_SqlUtils.getConditionWithOrder(${modelNameUpperCamel}.class, 
+		// 对象各查询字段名和字段值 依次存入参数数组 ，排序字段 ，排序方式
+				new String[] { "_fileId", _fileId, "categoryNo", categoryNo, "$archiveDate", $archiveDate }, "id","desc");
 		PageHelper.startPage(page, size);
 		List<${modelNameUpperCamel}> list = ${modelNameLowerCamel}Service.findByCondition(condition);
 

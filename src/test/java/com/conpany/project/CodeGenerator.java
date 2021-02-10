@@ -1,3 +1,4 @@
+package com.conpany.project;
 import com.google.common.base.CaseFormat;
 import freemarker.template.TemplateExceptionHandler;
 import org.apache.commons.lang3.StringUtils;
@@ -37,7 +38,7 @@ public class CodeGenerator {
     private static final String DATE = new SimpleDateFormat("yyyy/MM/dd").format(new Date());//@date
 
     public static void main(String[] args) {
-        genCode("bidding_batch");
+        genCode("archive");
         //genCodeByCustomModelName("输入表名","输入自定义Model名称");
     }
 

@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
-* Created by Merdader on 2021/02/08.
+* Created by Merdader on 2021/02/09.
 */
 @RestController
 @RequestMapping("/bidding/batch")
@@ -74,15 +74,15 @@ public class BiddingBatchController {
 	 * @return
 	 */
 	 
-	/** 
 	@PostMapping("/search")
 	public Result search(@RequestParam(defaultValue = "0") Integer page,
 			@RequestParam(defaultValue = "0") Integer size, @RequestParam(defaultValue = "0") String _fileId,
 			@RequestParam(defaultValue = "0") String categoryNo,
 			@RequestParam(defaultValue = "0") String $archiveDate) {
 	
-		Condition condition = FM_SqlUtils.getCondition(BiddingBatch.class, "_fileId", _fileId, "categoryNo", categoryNo,
-				"$archiveDate", $archiveDate);
+		Condition condition = FM_SqlUtils.getConditionWithOrder(BiddingBatch.class, 
+		// 对象各查询字段名和字段值 依次存入参数数组 ，排序字段 ，排序方式
+				new String[] { "_fileId", _fileId, "categoryNo", categoryNo, "$archiveDate", $archiveDate }, "id","desc");
 		PageHelper.startPage(page, size);
 		List<BiddingBatch> list = biddingBatchService.findByCondition(condition);
 
@@ -90,6 +90,5 @@ public class BiddingBatchController {
 		return ResultGenerator.genSuccessResult(pageInfo);
 	}
     
-	 */
     
 }
