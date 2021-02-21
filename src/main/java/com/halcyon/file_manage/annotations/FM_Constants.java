@@ -1,7 +1,5 @@
     package com.halcyon.file_manage.annotations;
 
-import cn.hutool.core.util.StrUtil;
-
 /** 
      * @ClassName: Constants    
      * @author: Merdader 
@@ -20,6 +18,7 @@ public final class FM_Constants {
     public static final String SEPARATOR_ID =",";
     public static final String SEPARATOR_LINK ="-";
     public static final String LIKE_QUERY_STR ="%%s%";
+    public static final String  USER_ROLES = "USER_ROLES";
     
 
 }

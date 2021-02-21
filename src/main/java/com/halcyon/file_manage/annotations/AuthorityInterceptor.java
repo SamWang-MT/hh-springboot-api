@@ -51,7 +51,7 @@ public class AuthorityInterceptor implements HandlerInterceptor {
 			// 如果能够访问 isSuccess = true;
 			SystemRole[] roles = authority.value();
 			HttpSession session = request.getSession();
-			SystemRole role = (SystemRole) session.getAttribute(SystemConstant.USER_ROLES);
+			SystemRole role = (SystemRole) session.getAttribute(FM_Constants.USER_ROLES);
 			if (role != null) {
 				// 已经登录 可用的 权限
 				for (SystemRole systemRole : roles) {

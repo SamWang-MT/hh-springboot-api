@@ -1,7 +1,5 @@
 package com.halcyon.file_manage.core;
 
-import java.util.Map;
-
 import org.apache.ibatis.mapping.MappedStatement;
 
 import tk.mybatis.mapper.mapperhelper.MapperHelper;
@@ -24,6 +22,8 @@ public class MySelectProvider  extends MapperTemplate{
     public String selectLastLimt(MappedStatement ms) {
         final Class<?> entityClass = getEntityClass(ms);
         //修改返回值类型为实体类型
+        
+        
         setResultType(ms, entityClass);
         StringBuilder sql = new StringBuilder();
         sql.append(SqlHelper.selectAllColumns(entityClass));

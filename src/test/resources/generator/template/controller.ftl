@@ -5,28 +5,38 @@ import ${basePackage}.model.${modelNameUpperCamel};
 import ${basePackage}.service.${modelNameUpperCamel}Service;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+
+import org.springframework.util.CollectionUtils;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import tk.mybatis.mapper.entity.Condition;
 import com.halcyon.file_manage.tools.FM_SqlUtils;
+import cn.hutool.core.util.StrUtil;
+
 
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
+
 
 /**
 * Created by ${author} on ${date}.
 */
 @RestController
-@RequestMapping("${baseRequestMapping}")
+@RequestMapping("api${baseRequestMapping}")
 public class ${modelNameUpperCamel}Controller {
     @Resource
     private ${modelNameUpperCamel}Service ${modelNameLowerCamel}Service;
 
     @PostMapping("/add")
     public Result add(${modelNameUpperCamel} ${modelNameLowerCamel}) {
+    	${modelNameLowerCamel}.setId(null);
+    	${modelNameLowerCamel}.setCreateTime(new Date()); 
+    	${modelNameLowerCamel}.setUpdateTime(new Date()); 
         ${modelNameLowerCamel}Service.save(${modelNameLowerCamel});
         return ResultGenerator.genSuccessResult();
     }
@@ -39,6 +49,8 @@ public class ${modelNameUpperCamel}Controller {
 
     @PostMapping("/update")
     public Result update(${modelNameUpperCamel} ${modelNameLowerCamel}) {
+    	${modelNameLowerCamel}.setUpdateTime(new Date());
+    
         ${modelNameLowerCamel}Service.update(${modelNameLowerCamel});
         return ResultGenerator.genSuccessResult();
     }
@@ -58,6 +70,38 @@ public class ${modelNameUpperCamel}Controller {
         return ResultGenerator.genSuccessResult(pageInfo);
              
     }
+    
+    
+        /**
+     * 根据对象ids 批量修改对象 一个或多个属性值
+     * @param ids   // 格式 "1,2,4"
+     * @param value	// 字段类型 根据业务类型 需要处理
+     * @return
+     */
+   
+    /** 
+    @PostMapping("/updateByIds")
+    public Result updatebyids(@RequestParam String ids , @RequestParam(defaultValue = " ")  String value ) {
+    	
+    	if (StrUtil.isBlankIfStr(ids)   ) {
+    		 return ResultGenerator.genFailResult_Args();
+		}
+    	List<${modelNameUpperCamel}> findByIds = ${modelNameLowerCamel}Service.findByIds(ids);
+    	if (CollectionUtils.isEmpty(findByIds)) {
+    		 return ResultGenerator.genFailResult_NotExist();
+		}
+    	Date updateTime = new Date();
+    	for (${modelNameUpperCamel} entity : findByIds) {
+    		entity.setUpdateTime(updateTime);
+    		//根据业务需要修改对象值 
+    		//	entity.setMark(value);
+    		// 页面少量批量处理 可以用循环提交 更新；大量批量处理需要新建优化sql
+    		${modelNameLowerCamel}Service.update(entity);
+		}
+        return ResultGenerator.genSuccessResult();
+    }
+    
+    */
     
     
     

@@ -3,9 +3,6 @@ package com.halcyon.file_manage.core;
 import org.apache.ibatis.exceptions.TooManyResultsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Condition;
-import tk.mybatis.mapper.entity.Example;
-import tk.mybatis.mapper.entity.Example.Criteria;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
@@ -74,8 +71,8 @@ public abstract class AbstractService<T> implements Service<T> {
 		return mapper.selectAll();
 	}
 
-	public List<T> selectLastLimt() {
-		return mapper.selectLastLimt();
+	public List<T> selectLastLimt(String ids) {
+		return mapper.selectLastLimt(ids);
 	}
 
 }

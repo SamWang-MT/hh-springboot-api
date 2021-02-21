@@ -27,6 +27,8 @@ public class ArchiveController {
 
     @PostMapping("/add")
     public Result add(Archive archive) {
+    	archive.setId(null);
+    	
         archiveService.save(archive);
         return ResultGenerator.genSuccessResult();
     }

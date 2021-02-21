@@ -18,6 +18,17 @@
     <result column="actual_amount" jdbcType="INTEGER" property="actualAmount" />
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="mark" jdbcType="VARCHAR" property="mark" />
-    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
+  
+<update id="updateFieldByIds">
+    update bidding_batch 
+    set  year = #{value} 
+    where id in
+    <foreach close=")" collection="ids" index="index" item="item" open="(" separator=",">
+        #{item}
+    </foreach>
+ </update>
+  
 </mapper>

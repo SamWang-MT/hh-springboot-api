@@ -82,8 +82,11 @@ public class BiddingBatch {
     /**
      * 创建日期
      */
-    @Column(name = "create_date")
-    private Date createDate;
+    @Column(name = "create_time")
+    private Date createTime;
+
+    @Column(name = "update_time")
+    private Date updateTime;
 
     /**
      * 获取ID
@@ -322,18 +325,32 @@ public class BiddingBatch {
     /**
      * 获取创建日期
      *
-     * @return create_date - 创建日期
+     * @return create_time - 创建日期
      */
-    public Date getCreateDate() {
-        return createDate;
+    public Date getCreateTime() {
+        return createTime;
     }
 
     /**
      * 设置创建日期
      *
-     * @param createDate 创建日期
+     * @param createTime 创建日期
      */
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * @return update_time
+     */
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    /**
+     * @param updateTime
+     */
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 }

@@ -30,6 +30,33 @@ public class FM_SqlUtils {
 		}
 		return queryMap;
 	}
+	
+	
+	// 
+	/**
+	 * 批量修改对象 某一个属性值  
+	 * @param <E>			对象类
+	 * @param beanClass		对象类型
+	 * @param ids			对象主键IDS  1，2，3
+	 * @param field			修改字段名	
+	 * @param value			修改后值
+	 * @return
+	 */
+	public static <E> Condition getBatchUpdateCondition(Class<E> beanClass, String ids,String field , Object value  ) {
+		Condition condition = new Condition(beanClass, false, false);
+		
+		Criteria criteria = condition.getOredCriteria().get(0);
+		
+		
+		
+		
+		
+		return condition;
+	}
+	
+	
+	
+	
 
 	/**
 	 * 创建Condition

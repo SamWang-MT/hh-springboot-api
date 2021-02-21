@@ -10,6 +10,8 @@ import com.halcyon.file_manage.tools.PageInfoUtils;
  */
 public class ResultGenerator {
 	private static final String DEFAULT_SUCCESS_MESSAGE = "SUCCESS";
+	private static final String FAIL_ARGS_MESSAGE = "请求失败，数据格式异常 ";
+	private static final String FAIL_NO_OBJECT = "请求失败，操作操作对象不存在";
 
 	@SuppressWarnings("rawtypes")
 	public static Result genSuccessResult() {
@@ -38,4 +40,16 @@ public class ResultGenerator {
 	public static Result genFailResult(String message) {
 		return new Result().setCode(ResultCode.FAIL).setMessage(message);
 	}
+	
+	@SuppressWarnings("rawtypes")
+	public static Result genFailResult_Args() {
+		return new Result().setCode(ResultCode.FAIL).setMessage(FAIL_ARGS_MESSAGE);
+	}
+	
+	@SuppressWarnings("rawtypes")
+	public static Result genFailResult_NotExist() {
+		return new Result().setCode(ResultCode.FAIL).setMessage(FAIL_NO_OBJECT);
+	}
+	
+	
 }
