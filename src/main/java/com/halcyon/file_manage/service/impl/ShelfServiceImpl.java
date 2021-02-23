@@ -11,13 +11,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.annotation.Resource;
 
 /**
- * Created by CodeGenerator on 2021/01/25.
+ * Created on 2021/01/25.
  */
 @Service
 @Transactional
@@ -31,10 +30,9 @@ public class ShelfServiceImpl extends AbstractService<Shelf> implements ShelfSer
 		List<Shelf> findAll = selectAll();
 		List<Shelf> rt_listList = new ArrayList<Shelf>();
 
-//		Iterator<Shelf> iterator = findAll.iterator();
 		for (Shelf shelf : findAll) {
 			String shelfbin2 = shelf.getShelfbin();
-			
+
 			if (StrUtil.startWith(shelfbin2, shelfBin)) {
 				rt_listList.add(shelf);
 			}
@@ -45,19 +43,16 @@ public class ShelfServiceImpl extends AbstractService<Shelf> implements ShelfSer
 
 	@Override
 	public List<Shelf> selectAll() {
-		// TODO Auto-generated method stub
 		return shelfMapper.selectAll();
 	}
 
 	@Override
 	public void updateOne(Shelf shelf) {
-		// TODO Auto-generated method stub
 		shelfMapper.updateOne(shelf);
 	}
 
 	@Override
 	public Shelf select4Id(Shelf shelf) {
-		// TODO Auto-generated method stub
 		return shelfMapper.select4Id(shelf);
 	}
 

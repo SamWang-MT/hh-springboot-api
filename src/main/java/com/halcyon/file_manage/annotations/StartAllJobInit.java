@@ -19,12 +19,7 @@ import com.halcyon.file_manage.service.ChemicalwmstockService;
 @Component // 注意 这里必须有
 public class StartAllJobInit {
 
-    protected Logger logger = LoggerFactory.getLogger(StartAllJobInit.class);
-//    @Autowired
-//    JobInfoService jobInfoService;
-//
-//    @Autowired
-//    JobTaskUtil jobTaskUtil;
+	protected Logger logger = LoggerFactory.getLogger(StartAllJobInit.class);
 
 	@Resource
 	private ChemicalwmnotesService notesService;
@@ -34,16 +29,10 @@ public class StartAllJobInit {
 	@PostConstruct // 构造函数之后执行
 	public void init() {
 		logger.info("spring boot started.");
-//		System.err.println("spring boot started.");
-//		startJob();
 	}
 
 	@SuppressWarnings("unused")
 	public void startJob() {
-//		System.out.println("startJob-REFRSH DB");
-//		logger.warn("startJob-REFRSH DB.");
-		
-//		List<Chemicalwmnotes> chemicalwmnotes = notesService.findAll();
 		List<Chemicalwmnotes> chemicalwmnotes = notesService.selectAll();
 		Map<String, Chemicalwmnotes> materalMap = new HashMap<String, Chemicalwmnotes>();
 
@@ -53,7 +42,6 @@ public class StartAllJobInit {
 
 		StorageContainer.getContainer().refreshMateral(materalMap);
 
-//		List<Chemicalwmstock> chemicalwmstock = stockService.findAll();
 		List<Chemicalwmstock> chemicalwmstock = stockService.selectAll();
 		StorageContainer.getContainer().refreshStorage(chemicalwmstock);
 

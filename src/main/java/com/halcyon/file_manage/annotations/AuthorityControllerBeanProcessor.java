@@ -49,7 +49,7 @@ public class AuthorityControllerBeanProcessor implements BeanPostProcessor {
 
 	@Override
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-		// TODO Auto-generated method stub
+		//
 		return bean;
 	}
 }

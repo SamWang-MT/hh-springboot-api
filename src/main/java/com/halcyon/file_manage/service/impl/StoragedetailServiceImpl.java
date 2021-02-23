@@ -12,7 +12,7 @@ import java.util.List;
 import javax.annotation.Resource;
 
 /**
- * Created by CodeGenerator on 2021/01/28.
+ * Created on 2021/01/28.
  */
 @Service
 @Transactional
@@ -40,13 +40,13 @@ public class StoragedetailServiceImpl extends AbstractService<Storagedetail> imp
 
 	@Override
 	public void updateOne(Storagedetail storagedetail) {
-		// TODO Auto-generated method stub
+		//
 		storagedetailMapper.updateOne(storagedetail);
 	}
 
 	@Override
 	public Storagedetail select4Id(Storagedetail storagedetail) {
-		// TODO Auto-generated method stub
+		//
 		return storagedetailMapper.select4Id(storagedetail);
 	}
 

@@ -1,5 +1,4 @@
 package com.halcyon.file_manage.service;
-import com.halcyon.file_manage.model.Shelf;
 import com.halcyon.file_manage.model.Storagedetail;
 
 import java.util.List;
@@ -8,7 +7,7 @@ import com.halcyon.file_manage.core.Service;
 
 
 /**
- * Created by CodeGenerator on 2021/01/28.
+ * Created on 2021/01/28.
  */
 public interface StoragedetailService extends Service<Storagedetail> {
 	List<Storagedetail>  selectAll ();

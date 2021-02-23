@@ -4,7 +4,7 @@
 	namespace="com.halcyon.file_manage.dao.StoragedetailMapper">
 	<resultMap id="BaseResultMap"
 		type="com.halcyon.file_manage.model.Storagedetail">
-		<!-- WARNING - @mbg.generated -->
+		<!-- WARNING -->
 		<id column="id" jdbcType="INTEGER" property="id" />
 		<result column="storageId" jdbcType="VARCHAR"
 			property="storageid" />
@@ -23,8 +23,9 @@
 
 
 	<select id="select4Id" resultMap="BaseResultMap"
-	parameterType="com.halcyon.file_manage.model.Storagedetail" >
-		select * from
+		parameterType="com.halcyon.file_manage.model.Storagedetail">
+		select *
+		from
 		local_sap_data.ChemicalWMStorageDetail
 		where id = #{id}
 	</select>

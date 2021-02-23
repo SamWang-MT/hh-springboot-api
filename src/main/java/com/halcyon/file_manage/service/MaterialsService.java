@@ -7,7 +7,7 @@ import com.halcyon.file_manage.model.SearchType;
 
 
 /**
- * Created by CodeGenerator on 2021/01/09.
+ * Created on 2021/01/09.
  */
 public interface MaterialsService extends Service<Materials> {
 

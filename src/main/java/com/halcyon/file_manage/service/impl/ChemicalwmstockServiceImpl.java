@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 
 
 /**
- * Created by CodeGenerator on 2021/01/25.
+ * Created on 2021/01/25.
  */
 @Service
 @Transactional
@@ -23,7 +23,7 @@ public class ChemicalwmstockServiceImpl extends AbstractService<Chemicalwmstock>
 
 	@Override
 	public List<Chemicalwmstock> selectAll() {
-		// TODO Auto-generated method stub
+		//
 		return chemicalwmstockMapper.selectAll();
 	}
 

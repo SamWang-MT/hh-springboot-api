@@ -3,7 +3,7 @@
 <mapper namespace="com.halcyon.file_manage.dao.ChemicalwmnotesMapper">
   <resultMap id="BaseResultMap" type="com.halcyon.file_manage.model.Chemicalwmnotes">
     <!--
-      WARNING - @mbg.generated
+      WARNING
     -->
     <id column="MaterialNo" jdbcType="VARCHAR" property="materialno" />
     <result column="ChemicalBrand" jdbcType="VARCHAR" property="chemicalbrand" />

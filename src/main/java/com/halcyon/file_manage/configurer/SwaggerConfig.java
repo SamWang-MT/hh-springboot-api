@@ -26,7 +26,6 @@ public class SwaggerConfig {
 					.enable(enabled)
 					.apiInfo(apiInfo())
 					.select()
-					// 扫描Swagger作用的包
 					.apis(RequestHandlerSelectors.basePackage("com.halcyon.file_manage.web"))
 					.paths(PathSelectors.regex("/*"))
 					.build();

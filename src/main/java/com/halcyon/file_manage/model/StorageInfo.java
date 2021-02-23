@@ -1,15 +1,7 @@
 package com.halcyon.file_manage.model;
 
-import java.util.Map;
-
 public class StorageInfo extends Chemicalwmstock {
 
-	/*
-	 * "storageBin": "41-01-001", = "materalNo": "10000001",= "chemicalBrand": ""，!
-	 * "baseUnit": "Kg", "totalQuantity": 123.230,=
-	 * "description":" description- descriptions",=
-	 * "dOCLink":"127.0.0.1:8080/chemical/3.html";!
-	 */
 
 	private String chemicalBrand;
 	private String dOCLink;

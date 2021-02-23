@@ -33,9 +33,7 @@ public class AuthorityInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 
-		// 将handler强转为HandlerMethod, 前面已经证实这个handler就是HandlerMethod
 		HandlerMethod handlerMethod = (HandlerMethod) handler;
-		// 从方法处理器中获取出要调用的方法
 		Method method = handlerMethod.getMethod();
 
 		String target = handlerMethod.getBean().getClass().getName() + "." + method.getName();
@@ -46,14 +44,10 @@ public class AuthorityInterceptor implements HandlerInterceptor {
 		Boolean isSuccess = false; // 是否能够访问
 		// 对应的方法设置的权限
 		if (authority != null) {
-			// 这里进行条件判断，
-			// 本项目中的做法是，取得用户信息，然后判断用户是哪个平台的，在决定是否能够访问。
-			// 如果能够访问 isSuccess = true;
 			SystemRole[] roles = authority.value();
 			HttpSession session = request.getSession();
 			SystemRole role = (SystemRole) session.getAttribute(SystemConstant.USER_ROLES);
 			if (role != null) {
-				// 已经登录 可用的 权限
 				for (SystemRole systemRole : roles) {
 					if (systemRole == role) {
 						isSuccess = true;
