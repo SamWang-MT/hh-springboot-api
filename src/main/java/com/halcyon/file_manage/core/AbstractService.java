@@ -19,7 +19,8 @@ public abstract class AbstractService<T> implements Service<T> {
 
     private Class<T> modelClass;    // 当前泛型真实类型的Class
 
-    public AbstractService() {
+    @SuppressWarnings("unchecked")
+	public AbstractService() {
         ParameterizedType pt = (ParameterizedType) this.getClass().getGenericSuperclass();
         modelClass = (Class<T>) pt.getActualTypeArguments()[0];
     }
