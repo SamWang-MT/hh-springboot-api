@@ -7,6 +7,7 @@
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="year" jdbcType="INTEGER" property="year" />
+    <result column="batch" jdbcType="VARCHAR" property="batch" />
     <result column="block" jdbcType="INTEGER" property="block" />
     <result column="packages" jdbcType="INTEGER" property="packages" />
     <result column="bidding_date" jdbcType="TIMESTAMP" property="biddingDate" />

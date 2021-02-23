@@ -4,7 +4,7 @@ import com.halcyon.file_manage.core.Service;
 
 
 /**
- * Created by Merdader on 2021/02/09.
+ * Created by Merdader on 2021/02/21.
  */
 public interface ArchiveService extends Service<Archive> {
 

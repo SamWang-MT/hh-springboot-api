@@ -8,6 +8,7 @@ import com.github.pagehelper.PageInfo;
 
 import org.springframework.util.CollectionUtils;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import tk.mybatis.mapper.entity.Condition;
 import com.halcyon.file_manage.tools.FM_SqlUtils;
 import cn.hutool.core.util.StrUtil;
+import io.swagger.annotations.ApiParam;
 
 
 
@@ -33,7 +35,8 @@ public class ${modelNameUpperCamel}Controller {
     private ${modelNameUpperCamel}Service ${modelNameLowerCamel}Service;
 
     @PostMapping("/add")
-    public Result add(${modelNameUpperCamel} ${modelNameLowerCamel}) {
+    public Result add( 	@RequestBody  @ApiParam(value = "json/application",required = true)   
+    					@Validated  ${modelNameUpperCamel} ${modelNameLowerCamel}) {
     	${modelNameLowerCamel}.setId(null);
     	${modelNameLowerCamel}.setCreateTime(new Date()); 
     	${modelNameLowerCamel}.setUpdateTime(new Date()); 
@@ -114,6 +117,7 @@ public class ${modelNameUpperCamel}Controller {
 	 * @param categoryNo   普通相等字段使用对象字段名
 	 * @param _fileId      模糊查询字段需要下划线开头
 	 * @param $archiveDate 范围查询$开头 范围查页面传入开始和结束值使用逗号拼接传入
+	 					  	例如日期范围：'2020-01-05,2020-02-15'，数值范围： '12,19'
 	 * 
 	 * @return
 	 */

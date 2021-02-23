@@ -2,7 +2,14 @@ package com.halcyon.file_manage.model;
 
 import java.util.Date;
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
+import io.swagger.annotations.ApiModel;
+
+@ApiModel(description = "招标批次对象")
 @Table(name = "bidding_batch")
 public class BiddingBatch {
     /**
@@ -15,7 +22,15 @@ public class BiddingBatch {
     /**
      * 年度
      */
+    @NotNull(message = "招标批次年份不能为空")
+    @Max(value = 2099,message = "招标批次年份-范围必须在1980到2099之间")
+    @Min(value = 1990,message = "招标批次年份-范围必须在1980到2099之间")
     private Integer year;
+
+    /**
+     * 批次
+     */
+    private String batch;
 
     /**
      * 标段
@@ -42,6 +57,7 @@ public class BiddingBatch {
     /**
      * 临时货架号
      */
+    @Size(min= 5, max= 5,message = "货架号长度必须是5位长度的. 格式：01-02")
     @Column(name = "temp_shelf")
     private String tempShelf;
 
@@ -122,6 +138,24 @@ public class BiddingBatch {
      */
     public void setYear(Integer year) {
         this.year = year;
+    }
+
+    /**
+     * 获取批次
+     *
+     * @return batch - 批次
+     */
+    public String getBatch() {
+        return batch;
+    }
+
+    /**
+     * 设置批次
+     *
+     * @param batch 批次
+     */
+    public void setBatch(String batch) {
+        this.batch = batch;
     }
 
     /**

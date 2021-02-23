@@ -36,6 +36,14 @@
 			<scope>test</scope>
 		</dependency>
 		<!--常用库依赖 -->
+		<!-- api core -->
+			<dependency>
+			<groupId>com.halcyon</groupId>
+			<artifactId>api-core</artifactId>
+			<version>0.5.0</version>
+			</dependency>
+		
+		
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>

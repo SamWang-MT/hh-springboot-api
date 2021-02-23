@@ -27,5 +27,7 @@
     <result column="destroyed_mark" jdbcType="VARCHAR" property="destroyedMark" />
     <result column="storage_id" jdbcType="VARCHAR" property="storageId" />
     <result column="mark" jdbcType="VARCHAR" property="mark" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
 </mapper>

@@ -1,5 +1,3 @@
-
-
 ## Introduction 
 HH-SpringBoot-API is a seed project based on Spring Boot & MyBatis, which is used to quickly build small and medium-sized API and RESTful API projects. It has been used in many real projects, which is stable, simple and fast, so that we can get rid of those repetitive work and focus on the writing of business code.Here's a simple usage demo of how to implement a simple set of APIs and run provisioning services based on this project in just a few dozen seconds.
 
@@ -8,13 +6,11 @@ HH-SpringBoot-API is a seed project based on Spring Boot & MyBatis, which is use
 - 统一响应结果封装及生成工具
 - 统一异常处理
 - 简单的接口签名认证
-- 常用基础方法抽象封装
+- 常用基础方法抽象封装 
 - 使用Druid Spring Boot Starter 集成Druid数据库连接池与监控
 - 使用FastJsonHttpMessageConverter，提高JSON序列化速度
 - 集成MyBatis、通用Mapper插件、PageHelper分页插件，实现单表业务零SQL
-- 提供代码生成器根据表名生成对应的Model、Mapper、MapperXML、Service、ServiceImpl、Controller等基础代码，其中Controller模板默认提供POST和RESTful两套，根据需求在```CodeGenerator.genController(tableName)```方法中自己选择，默认使用POST模板。代码模板可根据实际项目的需求来扩展，由于每个公司业务都不太一样，所以只提供了一些比较基础、通用的模板，**主要是提供一个思路**来减少重复代码的编写，我在实际项目的使用中，其实根据公司业务的抽象编写了大量的模板。另外，使用模板也有助于保持团队代码风格的统一
-- 另有彩蛋，待你探索
-
+- 提供代码生成器根据表名生成对应的Model、Mapper、MapperXML、Service、ServiceImpl、Controller等基础代码，其中Controller模板默认提供POST和RESTful两套，根据需求在```CodeGenerator.genController(tableName)```方法中自己选择，默认使用POST模板。
 ## 快速开始
 1. 克隆项目
 2. 对```test```包内的代码生成器```CodeGenerator```进行配置，主要是JDBC，因为要根据表名来生成代码
@@ -28,7 +24,6 @@ HH-SpringBoot-API is a seed project based on Spring Boot & MyBatis, which is use
 - Model内成员变量建议与表字段数量对应，如需扩展成员变量（比如连表查询）建议创建DTO，否则需在扩展的成员变量上加```@Transient```注解，详情见[通用Mapper插件文档说明](https://mapperhelper.github.io/docs/2.use/)
 - 建议业务失败直接使用```ServiceException("message")```抛出，由统一异常处理器来封装业务失败的响应结果，比如```throw new ServiceException("该手机号已被注册")```，会直接被封装为```{"code":400,"message":"该手机号已被注册"}```返回，无需自己处理，尽情抛出
 - 需要工具类的话建议先从```apache-commons-*```和```guava```中找，实在没有再造轮子或引入类库，尽量精简项目
-- 建议在公司内部使用[ShowDoc](https://github.com/star7th/showdoc)、[SpringFox-Swagger2](https://github.com/springfox/springfox) 、[RAP](https://github.com/thx/RAP)等开源项目来编写、管理API文档
 
 ## 技术选型&文档
 - Spring Boot（[查看Spring Boot学习&使用指南](http://www.jianshu.com/p/1a9fd8936bd8)）
@@ -39,5 +34,4 @@ HH-SpringBoot-API is a seed project based on Spring Boot & MyBatis, which is use
 - Fastjson（[查看官方中文文档](https://github.com/Alibaba/fastjson/wiki/%E9%A6%96%E9%A1%B5)）
 - 其他略
 
-## License
-暂无
+
