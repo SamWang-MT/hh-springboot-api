@@ -28,8 +28,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.validation.BindException;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
@@ -56,9 +54,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 		FastJsonHttpMessageConverter converter = new FastJsonHttpMessageConverter();
 		FastJsonConfig config = new FastJsonConfig();
 		config.setSerializerFeatures(SerializerFeature.WriteMapNullValue);// 保留空的字段
-		// SerializerFeature.WriteNullStringAsEmpty,//String null -> ""
-		// SerializerFeature.WriteNullNumberAsZero//Number null -> 0
-		// 按需配置，更多参考FastJson文档哈
+		
 
 		converter.setFastJsonConfig(config);
 		converter.setDefaultCharset(Charset.forName("UTF-8"));
@@ -80,19 +76,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 					result.setCode(ResultCode.NOT_FOUND).setMessage("接口 [" + request.getRequestURI() + "] 不存在");
 				} else if (e instanceof ServletException) {
 					result.setCode(ResultCode.FAIL).setMessage(e.getMessage());
-				}else if (e instanceof MethodArgumentNotValidException) {
-					//对象属性校验
-					logger.info(e.getMessage());
-					MethodArgumentNotValidException errArgument =	 (MethodArgumentNotValidException)e;
-					result.setCode(ResultCode.ARGS_ERROR).setMessage(errArgument.getBindingResult().getFieldError().getDefaultMessage());
-				}else if (e instanceof BindException) {
-					logger.info(e.getMessage());
-					// 数据绑定失败
-					BindException errArgument =	 (BindException)e;
-					result.setCode(ResultCode.ARGS_ERROR).setMessage(errArgument.getBindingResult().getFieldError().getDefaultMessage());
-				}
-				
-				else {
+				} else {
 					result.setCode(ResultCode.INTERNAL_SERVER_ERROR)
 							.setMessage("接口 [" + request.getRequestURI() + "] 内部错误，请联系管理员");
 					String message;
