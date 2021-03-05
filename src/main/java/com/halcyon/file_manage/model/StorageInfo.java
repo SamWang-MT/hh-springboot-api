@@ -2,6 +2,8 @@ package com.halcyon.file_manage.model;
 
 import java.util.Map;
 
+import cn.hutool.core.util.StrUtil;
+
 public class StorageInfo extends Chemicalwmstock {
 
 	/*
@@ -57,11 +59,15 @@ public class StorageInfo extends Chemicalwmstock {
 		this.setDescription(stock.getDescription());
 		this.setTotalquantity(stock.getTotalquantity());
 		this.setBaseunit(stock.getBaseunit());
-		if (materal !=  null) {
-			this.chemicalBrand = materal.getChemicalbrand();
+		if (materal != null) {
+			String chemicalbrand2 = materal.getChemicalbrand();
+			if (StrUtil.isBlankIfStr(chemicalbrand2)) {
+				this.chemicalBrand = "non hazardous";
+			} else {
+				this.chemicalBrand = chemicalbrand2;
+			}
 			this.dOCLink = materal.getDoclink();
 		}
-
 	}
 
 }
