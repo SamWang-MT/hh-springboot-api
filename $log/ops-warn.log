@@ -17,3 +17,37 @@
 2021-03-05 01:08:33.869 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
 2021-03-05 01:10:50.927 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
 2021-03-05 01:10:56.161 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:29:37.283 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:29:42.448 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:31:42.450 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:34:24.240 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:34:28.781 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:36:03.001 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:36:07.558 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:38:07.559 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:39:49.583 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:39:53.987 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:41:53.989 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:43:53.990 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:45:53.991 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:47:23.893 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:47:27.030 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:47:37.499 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:47:42.162 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:49:09.374 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:49:13.954 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:51:13.956 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:53:13.957 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:54:44.741 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:54:49.354 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:56:49.356 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 16:00:02.495 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 16:00:07.023 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 16:02:07.025 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 16:05:29.878 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 16:05:32.973 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 16:11:00.700 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 16:11:03.891 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 16:12:00.840 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 16:12:05.720 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 16:14:05.722 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.

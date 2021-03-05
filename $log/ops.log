@@ -605,3 +605,1021 @@ java.lang.IllegalStateException: getWriter() has already been called for this re
 2021-03-05 01:11:05.233 [INFO ] [http-nio-8001-exec-4] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
 2021-03-05 01:11:05.234 [INFO ] [http-nio-8001-exec-4] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
 2021-03-05 01:11:05.254 [INFO ] [http-nio-8001-exec-4] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2021-03-05 15:29:35.265 [INFO ] [main] com.halcyon.file_manage.Application - Starting Application on DEEP-2019PSSVHS with PID 1268 (D:\hr21_work\halycon-file-manger-api\target\classes started by Administrator in D:\hr21_work\halycon-file-manger-api)
+2021-03-05 15:29:35.367 [INFO ] [main] com.halcyon.file_manage.Application - The following profiles are active: dev
+2021-03-05 15:29:35.569 [INFO ] [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:29:35 EST 2021]; root of context hierarchy
+2021-03-05 15:29:37.283 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:29:37.554 [INFO ] [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2021-03-05 15:29:37.693 [INFO ] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8b5b949e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-05 15:29:38.481 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8001 (http)
+2021-03-05 15:29:38.522 [INFO ] [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-05 15:29:38.523 [INFO ] [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-03-05 15:29:38.686 [INFO ] [localhost-startStop-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-05 15:29:38.687 [INFO ] [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3118 ms
+2021-03-05 15:29:38.946 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2021-03-05 15:29:38.947 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2021-03-05 15:29:38.951 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-05 15:29:38.952 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-05 15:29:38.952 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-05 15:29:38.952 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-05 15:29:38.952 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2021-03-05 15:29:39.043 [INFO ] [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-03-05 15:29:39.637 [INFO ] [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-03-05 15:29:40.333 [INFO ] [main] c.halcyon.file_manage.annotations.StartAllJobInit - spring boot started.
+2021-03-05 15:29:40.923 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2021-03-05 15:29:40.924 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/material/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.MaterialController.list(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2021-03-05 15:29:40.925 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.update(com.halcyon.file_manage.model.Shelf)
+2021-03-05 15:29:40.925 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:29:40.926 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storage/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StorageController.list(java.lang.String)
+2021-03-05 15:29:40.927 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.update(com.halcyon.file_manage.model.Storagedetail)
+2021-03-05 15:29:40.927 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:29:40.928 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-05 15:29:40.931 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-05 15:29:40.932 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-05 15:29:40.932 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-05 15:29:40.935 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-05 15:29:40.936 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-05 15:29:41.400 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:29:35 EST 2021]; root of context hierarchy
+2021-03-05 15:29:41.479 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:29:41.479 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:29:41.480 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:29:41.522 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:29:41.551 [INFO ] [main] o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-03-05 15:29:41.986 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-03-05 15:29:41.988 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2021-03-05 15:29:41.988 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-05 15:29:41.994 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2021-03-05 15:29:41.995 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2021-03-05 15:29:42.001 [INFO ] [main] o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2021-03-05 15:29:42.001 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-05 15:29:42.040 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-05 15:29:42.057 [INFO ] [main] s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-05 15:29:42.400 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_1
+2021-03-05 15:29:42.413 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_2
+2021-03-05 15:29:42.416 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_3
+2021-03-05 15:29:42.419 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2021-03-05 15:29:42.441 [INFO ] [main] o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-03-05 15:29:42.448 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:29:42.512 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8001 (http)
+2021-03-05 15:29:42.521 [INFO ] [main] com.halcyon.file_manage.Application - Started Application in 8.054 seconds (JVM running for 8.981)
+2021-03-05 15:29:44.631 [ERROR] [Druid-ConnectionPool-Create-1406904781] com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:mysql://localhost:3306/local_sap_data?characterEncoding=utf-8&useSSL=false, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 18 common frames omitted
+2021-03-05 15:29:46.636 [ERROR] [Druid-ConnectionPool-Create-1406904781] com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:mysql://localhost:3306/local_sap_data?characterEncoding=utf-8&useSSL=false, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 18 common frames omitted
+2021-03-05 15:29:49.154 [ERROR] [Druid-ConnectionPool-Create-1406904781] com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:mysql://localhost:3306/local_sap_data?characterEncoding=utf-8&useSSL=false, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 18 common frames omitted
+2021-03-05 15:29:51.648 [ERROR] [Druid-ConnectionPool-Create-1406904781] com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:mysql://localhost:3306/local_sap_data?characterEncoding=utf-8&useSSL=false, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 18 common frames omitted
+2021-03-05 15:29:54.150 [ERROR] [Druid-ConnectionPool-Create-1406904781] com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:mysql://localhost:3306/local_sap_data?characterEncoding=utf-8&useSSL=false, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 18 common frames omitted
+2021-03-05 15:29:56.649 [ERROR] [Druid-ConnectionPool-Create-1406904781] com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:mysql://localhost:3306/local_sap_data?characterEncoding=utf-8&useSSL=false, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 18 common frames omitted
+2021-03-05 15:29:59.155 [ERROR] [Druid-ConnectionPool-Create-1406904781] com.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:mysql://localhost:3306/local_sap_data?characterEncoding=utf-8&useSSL=false, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 18 common frames omitted
+2021-03-05 15:30:24.588 [INFO ] [http-nio-8001-exec-2] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-05 15:30:24.589 [INFO ] [http-nio-8001-exec-2] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-05 15:30:24.616 [INFO ] [http-nio-8001-exec-2] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2021-03-05 15:31:42.450 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:34:23.191 [INFO ] [main] com.halcyon.file_manage.Application - Starting Application on DEEP-2019PSSVHS with PID 288 (D:\hr21_work\halycon-file-manger-api\target\classes started by Administrator in D:\hr21_work\halycon-file-manger-api)
+2021-03-05 15:34:23.206 [INFO ] [main] com.halcyon.file_manage.Application - The following profiles are active: dev
+2021-03-05 15:34:23.254 [INFO ] [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:34:23 EST 2021]; root of context hierarchy
+2021-03-05 15:34:24.240 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:34:24.456 [INFO ] [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2021-03-05 15:34:24.593 [INFO ] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1dc713fc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-05 15:34:25.202 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8001 (http)
+2021-03-05 15:34:25.235 [INFO ] [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-05 15:34:25.236 [INFO ] [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-03-05 15:34:25.404 [INFO ] [localhost-startStop-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-05 15:34:25.405 [INFO ] [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2151 ms
+2021-03-05 15:34:25.646 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2021-03-05 15:34:25.648 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2021-03-05 15:34:25.651 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-05 15:34:25.652 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-05 15:34:25.652 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-05 15:34:25.652 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-05 15:34:25.652 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2021-03-05 15:34:25.727 [INFO ] [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-03-05 15:34:26.222 [INFO ] [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-03-05 15:34:26.832 [INFO ] [main] c.halcyon.file_manage.annotations.StartAllJobInit - spring boot started.
+2021-03-05 15:34:27.394 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2021-03-05 15:34:27.395 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/material/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.MaterialController.list(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2021-03-05 15:34:27.396 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.update(com.halcyon.file_manage.model.Shelf)
+2021-03-05 15:34:27.396 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:34:27.397 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storage/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StorageController.list(java.lang.String)
+2021-03-05 15:34:27.398 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.update(com.halcyon.file_manage.model.Storagedetail)
+2021-03-05 15:34:27.398 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:34:27.398 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-05 15:34:27.401 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-05 15:34:27.402 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-05 15:34:27.403 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-05 15:34:27.405 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-05 15:34:27.406 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-05 15:34:27.820 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:34:23 EST 2021]; root of context hierarchy
+2021-03-05 15:34:27.885 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:34:27.885 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:34:27.885 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:34:27.923 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:34:27.950 [INFO ] [main] o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-03-05 15:34:28.386 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-03-05 15:34:28.388 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2021-03-05 15:34:28.389 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-05 15:34:28.394 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2021-03-05 15:34:28.395 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2021-03-05 15:34:28.398 [INFO ] [main] o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2021-03-05 15:34:28.398 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-05 15:34:28.424 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-05 15:34:28.440 [INFO ] [main] s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-05 15:34:28.731 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_1
+2021-03-05 15:34:28.745 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_2
+2021-03-05 15:34:28.749 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_3
+2021-03-05 15:34:28.753 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2021-03-05 15:34:28.774 [INFO ] [main] o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-03-05 15:34:28.781 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:34:28.810 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8001 (http)
+2021-03-05 15:34:28.819 [INFO ] [main] com.halcyon.file_manage.Application - Started Application in 6.096 seconds (JVM running for 6.692)
+2021-03-05 15:34:34.735 [INFO ] [http-nio-8001-exec-2] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-05 15:34:34.736 [INFO ] [http-nio-8001-exec-2] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-05 15:34:34.759 [INFO ] [http-nio-8001-exec-2] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2021-03-05 15:36:01.779 [INFO ] [main] com.halcyon.file_manage.Application - Starting Application on DEEP-2019PSSVHS with PID 7164 (D:\hr21_work\halycon-file-manger-api\target\classes started by Administrator in D:\hr21_work\halycon-file-manger-api)
+2021-03-05 15:36:01.833 [INFO ] [main] com.halcyon.file_manage.Application - The following profiles are active: dev
+2021-03-05 15:36:02.035 [INFO ] [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:36:02 EST 2021]; root of context hierarchy
+2021-03-05 15:36:03.001 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:36:03.218 [INFO ] [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2021-03-05 15:36:03.351 [INFO ] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5fed7384] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-05 15:36:03.951 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8001 (http)
+2021-03-05 15:36:03.982 [INFO ] [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-05 15:36:03.983 [INFO ] [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-03-05 15:36:04.139 [INFO ] [localhost-startStop-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-05 15:36:04.139 [INFO ] [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2104 ms
+2021-03-05 15:36:04.360 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2021-03-05 15:36:04.362 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2021-03-05 15:36:04.365 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-05 15:36:04.366 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-05 15:36:04.366 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-05 15:36:04.366 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-05 15:36:04.366 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2021-03-05 15:36:04.441 [INFO ] [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-03-05 15:36:04.939 [INFO ] [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-03-05 15:36:05.630 [INFO ] [main] c.halcyon.file_manage.annotations.StartAllJobInit - spring boot started.
+2021-03-05 15:36:06.207 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2021-03-05 15:36:06.208 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/material/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.MaterialController.list(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2021-03-05 15:36:06.209 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.update(com.halcyon.file_manage.model.Shelf)
+2021-03-05 15:36:06.209 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:36:06.210 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storage/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StorageController.list(java.lang.String)
+2021-03-05 15:36:06.210 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.update(com.halcyon.file_manage.model.Storagedetail)
+2021-03-05 15:36:06.211 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:36:06.211 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-05 15:36:06.215 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-05 15:36:06.216 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-05 15:36:06.217 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-05 15:36:06.220 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-05 15:36:06.221 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-05 15:36:06.648 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:36:02 EST 2021]; root of context hierarchy
+2021-03-05 15:36:06.722 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:36:06.722 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:36:06.722 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:36:06.760 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:36:06.788 [INFO ] [main] o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-03-05 15:36:07.180 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-03-05 15:36:07.182 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2021-03-05 15:36:07.182 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-05 15:36:07.188 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2021-03-05 15:36:07.193 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2021-03-05 15:36:07.197 [INFO ] [main] o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2021-03-05 15:36:07.198 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-05 15:36:07.224 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-05 15:36:07.239 [INFO ] [main] s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-05 15:36:07.507 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_1
+2021-03-05 15:36:07.521 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_2
+2021-03-05 15:36:07.524 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_3
+2021-03-05 15:36:07.528 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2021-03-05 15:36:07.551 [INFO ] [main] o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-03-05 15:36:07.558 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:36:07.593 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8001 (http)
+2021-03-05 15:36:07.601 [INFO ] [main] com.halcyon.file_manage.Application - Started Application in 6.272 seconds (JVM running for 6.899)
+2021-03-05 15:36:14.147 [INFO ] [http-nio-8001-exec-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-05 15:36:14.147 [INFO ] [http-nio-8001-exec-1] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-05 15:36:14.169 [INFO ] [http-nio-8001-exec-1] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2021-03-05 15:38:07.559 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:39:48.446 [INFO ] [main] com.halcyon.file_manage.Application - Starting Application on DEEP-2019PSSVHS with PID 7744 (D:\hr21_work\halycon-file-manger-api\target\classes started by Administrator in D:\hr21_work\halycon-file-manger-api)
+2021-03-05 15:39:48.504 [INFO ] [main] com.halcyon.file_manage.Application - The following profiles are active: dev
+2021-03-05 15:39:48.574 [INFO ] [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:39:48 EST 2021]; root of context hierarchy
+2021-03-05 15:39:49.583 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:39:49.806 [INFO ] [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2021-03-05 15:39:49.931 [INFO ] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$825d3463] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-05 15:39:50.490 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8001 (http)
+2021-03-05 15:39:50.524 [INFO ] [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-05 15:39:50.525 [INFO ] [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-03-05 15:39:50.701 [INFO ] [localhost-startStop-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-05 15:39:50.702 [INFO ] [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2128 ms
+2021-03-05 15:39:50.935 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2021-03-05 15:39:50.937 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2021-03-05 15:39:50.940 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-05 15:39:50.941 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-05 15:39:50.941 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-05 15:39:50.941 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-05 15:39:50.941 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2021-03-05 15:39:51.014 [INFO ] [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-03-05 15:39:51.502 [INFO ] [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-03-05 15:39:52.124 [INFO ] [main] c.halcyon.file_manage.annotations.StartAllJobInit - spring boot started.
+2021-03-05 15:39:52.667 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2021-03-05 15:39:52.669 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/material/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.MaterialController.list(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2021-03-05 15:39:52.670 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.update(com.halcyon.file_manage.model.Shelf)
+2021-03-05 15:39:52.670 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:39:52.671 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storage/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StorageController.list(java.lang.String)
+2021-03-05 15:39:52.672 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.update(com.halcyon.file_manage.model.Storagedetail)
+2021-03-05 15:39:52.672 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:39:52.673 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-05 15:39:52.676 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-05 15:39:52.677 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-05 15:39:52.678 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-05 15:39:52.681 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-05 15:39:52.681 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-05 15:39:53.093 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:39:48 EST 2021]; root of context hierarchy
+2021-03-05 15:39:53.157 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:39:53.157 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:39:53.157 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:39:53.191 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:39:53.217 [INFO ] [main] o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-03-05 15:39:53.609 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-03-05 15:39:53.611 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2021-03-05 15:39:53.611 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-05 15:39:53.616 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2021-03-05 15:39:53.617 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2021-03-05 15:39:53.620 [INFO ] [main] o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2021-03-05 15:39:53.621 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-05 15:39:53.646 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-05 15:39:53.660 [INFO ] [main] s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-05 15:39:53.939 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_1
+2021-03-05 15:39:53.952 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_2
+2021-03-05 15:39:53.955 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_3
+2021-03-05 15:39:53.959 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2021-03-05 15:39:53.980 [INFO ] [main] o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-03-05 15:39:53.987 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:39:54.033 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8001 (http)
+2021-03-05 15:39:54.043 [INFO ] [main] com.halcyon.file_manage.Application - Started Application in 6.039 seconds (JVM running for 6.578)
+2021-03-05 15:40:01.289 [INFO ] [http-nio-8001-exec-4] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-05 15:40:01.290 [INFO ] [http-nio-8001-exec-4] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-05 15:40:01.314 [INFO ] [http-nio-8001-exec-4] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2021-03-05 15:41:53.989 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:43:53.990 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:45:53.991 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:47:23.079 [INFO ] [main] com.halcyon.file_manage.Application - Starting Application on DEEP-2019PSSVHS with PID 2448 (D:\hr21_work\halycon-file-manger-api\target\classes started by Administrator in D:\hr21_work\halycon-file-manger-api)
+2021-03-05 15:47:23.082 [INFO ] [main] com.halcyon.file_manage.Application - The following profiles are active: dev
+2021-03-05 15:47:23.133 [INFO ] [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1d119efb: startup date [Fri Mar 05 15:47:23 EST 2021]; root of context hierarchy
+2021-03-05 15:47:23.893 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:47:24.036 [INFO ] [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2021-03-05 15:47:24.124 [INFO ] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e79cb768] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-05 15:47:24.563 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8001 (http)
+2021-03-05 15:47:24.589 [INFO ] [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-05 15:47:24.590 [INFO ] [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-03-05 15:47:24.702 [INFO ] [localhost-startStop-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-05 15:47:24.702 [INFO ] [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1569 ms
+2021-03-05 15:47:24.883 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2021-03-05 15:47:24.885 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2021-03-05 15:47:24.890 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-05 15:47:24.890 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-05 15:47:24.890 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-05 15:47:24.891 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-05 15:47:24.891 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2021-03-05 15:47:24.945 [INFO ] [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-03-05 15:47:25.347 [INFO ] [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-03-05 15:47:25.811 [INFO ] [main] c.halcyon.file_manage.annotations.StartAllJobInit - spring boot started.
+2021-03-05 15:47:26.199 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2021-03-05 15:47:26.200 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/material/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.MaterialController.list(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2021-03-05 15:47:26.201 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.update(com.halcyon.file_manage.model.Shelf)
+2021-03-05 15:47:26.201 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:47:26.201 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storage/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StorageController.list(java.lang.String)
+2021-03-05 15:47:26.202 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.update(com.halcyon.file_manage.model.Storagedetail)
+2021-03-05 15:47:26.203 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:47:26.203 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-05 15:47:26.206 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-05 15:47:26.207 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-05 15:47:26.207 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-05 15:47:26.210 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-05 15:47:26.210 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-05 15:47:26.484 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1d119efb: startup date [Fri Mar 05 15:47:23 EST 2021]; root of context hierarchy
+2021-03-05 15:47:26.527 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:47:26.527 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:47:26.527 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:47:26.550 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:47:26.573 [INFO ] [main] o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-03-05 15:47:26.770 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-03-05 15:47:26.772 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2021-03-05 15:47:26.772 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-05 15:47:26.776 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2021-03-05 15:47:26.777 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2021-03-05 15:47:26.780 [INFO ] [main] o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2021-03-05 15:47:26.780 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-05 15:47:26.798 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-05 15:47:26.809 [INFO ] [main] s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-05 15:47:26.992 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_1
+2021-03-05 15:47:27.003 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_2
+2021-03-05 15:47:27.006 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_3
+2021-03-05 15:47:27.009 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2021-03-05 15:47:27.025 [INFO ] [main] o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-03-05 15:47:27.030 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:47:27.058 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8001 (http)
+2021-03-05 15:47:27.067 [INFO ] [main] com.halcyon.file_manage.Application - Started Application in 4.295 seconds (JVM running for 4.615)
+2021-03-05 15:47:36.285 [INFO ] [main] com.halcyon.file_manage.Application - Starting Application on DEEP-2019PSSVHS with PID 3540 (D:\hr21_work\halycon-file-manger-api\target\classes started by Administrator in D:\hr21_work\halycon-file-manger-api)
+2021-03-05 15:47:36.295 [INFO ] [main] com.halcyon.file_manage.Application - The following profiles are active: dev
+2021-03-05 15:47:36.395 [INFO ] [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:47:36 EST 2021]; root of context hierarchy
+2021-03-05 15:47:37.499 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:47:37.724 [INFO ] [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2021-03-05 15:47:37.846 [INFO ] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a8f94092] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-05 15:47:38.505 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8001 (http)
+2021-03-05 15:47:38.540 [INFO ] [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-05 15:47:38.541 [INFO ] [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-03-05 15:47:38.744 [INFO ] [localhost-startStop-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-05 15:47:38.744 [INFO ] [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2349 ms
+2021-03-05 15:47:38.972 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2021-03-05 15:47:38.973 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2021-03-05 15:47:38.976 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-05 15:47:38.977 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-05 15:47:38.977 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-05 15:47:38.978 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-05 15:47:38.978 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2021-03-05 15:47:39.052 [INFO ] [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-03-05 15:47:39.586 [INFO ] [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-03-05 15:47:40.188 [INFO ] [main] c.halcyon.file_manage.annotations.StartAllJobInit - spring boot started.
+2021-03-05 15:47:40.762 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2021-03-05 15:47:40.764 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/material/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.MaterialController.list(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2021-03-05 15:47:40.764 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.update(com.halcyon.file_manage.model.Shelf)
+2021-03-05 15:47:40.765 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:47:40.765 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storage/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StorageController.list(java.lang.String)
+2021-03-05 15:47:40.766 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.update(com.halcyon.file_manage.model.Storagedetail)
+2021-03-05 15:47:40.766 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:47:40.767 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-05 15:47:40.770 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-05 15:47:40.771 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-05 15:47:40.772 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-05 15:47:40.775 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-05 15:47:40.775 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-05 15:47:41.182 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:47:36 EST 2021]; root of context hierarchy
+2021-03-05 15:47:41.249 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:47:41.249 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:47:41.249 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:47:41.291 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:47:41.318 [INFO ] [main] o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-03-05 15:47:41.760 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-03-05 15:47:41.762 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2021-03-05 15:47:41.762 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-05 15:47:41.768 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2021-03-05 15:47:41.769 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2021-03-05 15:47:41.772 [INFO ] [main] o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2021-03-05 15:47:41.773 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-05 15:47:41.799 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-05 15:47:41.814 [INFO ] [main] s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-05 15:47:42.118 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_1
+2021-03-05 15:47:42.130 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_2
+2021-03-05 15:47:42.134 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_3
+2021-03-05 15:47:42.137 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2021-03-05 15:47:42.156 [INFO ] [main] o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-03-05 15:47:42.162 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:47:42.192 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8001 (http)
+2021-03-05 15:47:42.199 [INFO ] [main] com.halcyon.file_manage.Application - Started Application in 6.414 seconds (JVM running for 6.975)
+2021-03-05 15:47:49.805 [INFO ] [http-nio-8001-exec-4] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-05 15:47:49.806 [INFO ] [http-nio-8001-exec-4] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-05 15:47:49.828 [INFO ] [http-nio-8001-exec-4] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2021-03-05 15:49:08.247 [INFO ] [main] com.halcyon.file_manage.Application - Starting Application on DEEP-2019PSSVHS with PID 8316 (D:\hr21_work\halycon-file-manger-api\target\classes started by Administrator in D:\hr21_work\halycon-file-manger-api)
+2021-03-05 15:49:08.266 [INFO ] [main] com.halcyon.file_manage.Application - The following profiles are active: dev
+2021-03-05 15:49:08.333 [INFO ] [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:49:08 EST 2021]; root of context hierarchy
+2021-03-05 15:49:09.374 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:49:09.610 [INFO ] [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2021-03-05 15:49:09.752 [INFO ] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$55a4dcfc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-05 15:49:10.333 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8001 (http)
+2021-03-05 15:49:10.366 [INFO ] [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-05 15:49:10.367 [INFO ] [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-03-05 15:49:10.514 [INFO ] [localhost-startStop-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-05 15:49:10.515 [INFO ] [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2182 ms
+2021-03-05 15:49:10.792 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2021-03-05 15:49:10.794 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2021-03-05 15:49:10.797 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-05 15:49:10.798 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-05 15:49:10.798 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-05 15:49:10.798 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-05 15:49:10.798 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2021-03-05 15:49:10.872 [INFO ] [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-03-05 15:49:11.382 [INFO ] [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-03-05 15:49:12.003 [INFO ] [main] c.halcyon.file_manage.annotations.StartAllJobInit - spring boot started.
+2021-03-05 15:49:12.575 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2021-03-05 15:49:12.577 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/material/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.MaterialController.list(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2021-03-05 15:49:12.578 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.update(com.halcyon.file_manage.model.Shelf)
+2021-03-05 15:49:12.578 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:49:12.580 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storage/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StorageController.list(java.lang.String)
+2021-03-05 15:49:12.581 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.update(com.halcyon.file_manage.model.Storagedetail)
+2021-03-05 15:49:12.581 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:49:12.583 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-05 15:49:12.588 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-05 15:49:12.589 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-05 15:49:12.590 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-05 15:49:12.594 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-05 15:49:12.595 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-05 15:49:13.030 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:49:08 EST 2021]; root of context hierarchy
+2021-03-05 15:49:13.097 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:49:13.097 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:49:13.097 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:49:13.136 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:49:13.162 [INFO ] [main] o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-03-05 15:49:13.563 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-03-05 15:49:13.564 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2021-03-05 15:49:13.565 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-05 15:49:13.571 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2021-03-05 15:49:13.573 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2021-03-05 15:49:13.576 [INFO ] [main] o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2021-03-05 15:49:13.577 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-05 15:49:13.603 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-05 15:49:13.620 [INFO ] [main] s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-05 15:49:13.910 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_1
+2021-03-05 15:49:13.923 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_2
+2021-03-05 15:49:13.927 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_3
+2021-03-05 15:49:13.930 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2021-03-05 15:49:13.948 [INFO ] [main] o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-03-05 15:49:13.954 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:49:13.995 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8001 (http)
+2021-03-05 15:49:14.001 [INFO ] [main] com.halcyon.file_manage.Application - Started Application in 6.214 seconds (JVM running for 6.751)
+2021-03-05 15:49:23.294 [INFO ] [http-nio-8001-exec-9] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-05 15:49:23.294 [INFO ] [http-nio-8001-exec-9] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-05 15:49:23.317 [INFO ] [http-nio-8001-exec-9] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2021-03-05 15:51:13.956 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:53:13.957 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:54:43.502 [INFO ] [main] com.halcyon.file_manage.Application - Starting Application on DEEP-2019PSSVHS with PID 9928 (D:\hr21_work\halycon-file-manger-api\target\classes started by Administrator in D:\hr21_work\halycon-file-manger-api)
+2021-03-05 15:54:43.511 [INFO ] [main] com.halcyon.file_manage.Application - The following profiles are active: dev
+2021-03-05 15:54:43.657 [INFO ] [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:54:43 EST 2021]; root of context hierarchy
+2021-03-05 15:54:44.741 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 15:54:44.977 [INFO ] [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2021-03-05 15:54:45.112 [INFO ] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$126402b8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-05 15:54:45.716 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8001 (http)
+2021-03-05 15:54:45.753 [INFO ] [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-05 15:54:45.754 [INFO ] [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-03-05 15:54:45.913 [INFO ] [localhost-startStop-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-05 15:54:45.913 [INFO ] [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2256 ms
+2021-03-05 15:54:46.155 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2021-03-05 15:54:46.157 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2021-03-05 15:54:46.161 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-05 15:54:46.161 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-05 15:54:46.161 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-05 15:54:46.161 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-05 15:54:46.162 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2021-03-05 15:54:46.238 [INFO ] [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-03-05 15:54:46.747 [INFO ] [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-03-05 15:54:47.403 [INFO ] [main] c.halcyon.file_manage.annotations.StartAllJobInit - spring boot started.
+2021-03-05 15:54:47.940 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2021-03-05 15:54:47.941 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/material/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.MaterialController.list(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2021-03-05 15:54:47.942 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.update(com.halcyon.file_manage.model.Shelf)
+2021-03-05 15:54:47.942 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:54:47.943 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storage/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StorageController.list(java.lang.String)
+2021-03-05 15:54:47.943 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.update(com.halcyon.file_manage.model.Storagedetail)
+2021-03-05 15:54:47.944 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 15:54:47.944 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-05 15:54:47.947 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-05 15:54:47.948 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-05 15:54:47.949 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-05 15:54:47.952 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-05 15:54:47.953 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-05 15:54:48.369 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 15:54:43 EST 2021]; root of context hierarchy
+2021-03-05 15:54:48.435 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:54:48.435 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:54:48.435 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:54:48.478 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 15:54:48.507 [INFO ] [main] o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-03-05 15:54:48.975 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-03-05 15:54:48.977 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2021-03-05 15:54:48.977 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-05 15:54:48.983 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2021-03-05 15:54:48.984 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2021-03-05 15:54:48.987 [INFO ] [main] o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2021-03-05 15:54:48.987 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-05 15:54:49.012 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-05 15:54:49.027 [INFO ] [main] s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-05 15:54:49.306 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_1
+2021-03-05 15:54:49.319 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_2
+2021-03-05 15:54:49.324 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_3
+2021-03-05 15:54:49.327 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2021-03-05 15:54:49.347 [INFO ] [main] o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-03-05 15:54:49.354 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 15:54:49.397 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8001 (http)
+2021-03-05 15:54:49.411 [INFO ] [main] com.halcyon.file_manage.Application - Started Application in 6.394 seconds (JVM running for 6.972)
+2021-03-05 15:55:01.336 [INFO ] [http-nio-8001-exec-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-05 15:55:01.336 [INFO ] [http-nio-8001-exec-1] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-05 15:55:01.358 [INFO ] [http-nio-8001-exec-1] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2021-03-05 15:56:49.356 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 16:00:01.334 [INFO ] [main] com.halcyon.file_manage.Application - Starting Application on DEEP-2019PSSVHS with PID 8492 (D:\hr21_work\halycon-file-manger-api\target\classes started by Administrator in D:\hr21_work\halycon-file-manger-api)
+2021-03-05 16:00:01.347 [INFO ] [main] com.halcyon.file_manage.Application - The following profiles are active: dev
+2021-03-05 16:00:01.424 [INFO ] [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 16:00:01 EST 2021]; root of context hierarchy
+2021-03-05 16:00:02.495 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 16:00:02.723 [INFO ] [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2021-03-05 16:00:02.859 [INFO ] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$28e6b7f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-05 16:00:03.497 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8001 (http)
+2021-03-05 16:00:03.533 [INFO ] [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-05 16:00:03.534 [INFO ] [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-03-05 16:00:03.696 [INFO ] [localhost-startStop-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-05 16:00:03.696 [INFO ] [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2272 ms
+2021-03-05 16:00:03.937 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2021-03-05 16:00:03.938 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2021-03-05 16:00:03.942 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-05 16:00:03.943 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-05 16:00:03.943 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-05 16:00:03.943 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-05 16:00:03.943 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2021-03-05 16:00:04.016 [INFO ] [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-03-05 16:00:04.531 [INFO ] [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-03-05 16:00:05.130 [INFO ] [main] c.halcyon.file_manage.annotations.StartAllJobInit - spring boot started.
+2021-03-05 16:00:05.659 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.login(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2021-03-05 16:00:05.660 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.logout(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2021-03-05 16:00:05.661 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/material/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.MaterialController.list(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2021-03-05 16:00:05.662 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.update(com.halcyon.file_manage.model.Shelf)
+2021-03-05 16:00:05.662 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 16:00:05.663 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storage/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StorageController.list(java.lang.String)
+2021-03-05 16:00:05.663 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.update(com.halcyon.file_manage.model.Storagedetail)
+2021-03-05 16:00:05.664 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 16:00:05.664 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-05 16:00:05.667 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-05 16:00:05.668 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-05 16:00:05.669 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-05 16:00:05.672 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-05 16:00:05.673 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-05 16:00:06.084 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 16:00:01 EST 2021]; root of context hierarchy
+2021-03-05 16:00:06.154 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:00:06.154 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:00:06.154 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:00:06.197 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:00:06.222 [INFO ] [main] o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-03-05 16:00:06.641 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-03-05 16:00:06.643 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2021-03-05 16:00:06.643 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-05 16:00:06.649 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2021-03-05 16:00:06.650 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2021-03-05 16:00:06.654 [INFO ] [main] o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2021-03-05 16:00:06.654 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-05 16:00:06.683 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-05 16:00:06.699 [INFO ] [main] s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-05 16:00:06.978 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_1
+2021-03-05 16:00:06.991 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_2
+2021-03-05 16:00:06.994 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_3
+2021-03-05 16:00:06.998 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2021-03-05 16:00:07.017 [INFO ] [main] o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-03-05 16:00:07.023 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 16:00:07.054 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8001 (http)
+2021-03-05 16:00:07.059 [INFO ] [main] com.halcyon.file_manage.Application - Started Application in 6.176 seconds (JVM running for 6.716)
+2021-03-05 16:00:16.871 [INFO ] [http-nio-8001-exec-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-05 16:00:16.872 [INFO ] [http-nio-8001-exec-1] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-05 16:00:16.895 [INFO ] [http-nio-8001-exec-1] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2021-03-05 16:02:07.025 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 16:05:29.014 [INFO ] [main] com.halcyon.file_manage.Application - Starting Application on DEEP-2019PSSVHS with PID 8544 (D:\hr21_work\halycon-file-manger-api\target\classes started by Administrator in D:\hr21_work\halycon-file-manger-api)
+2021-03-05 16:05:29.017 [INFO ] [main] com.halcyon.file_manage.Application - The following profiles are active: dev
+2021-03-05 16:05:29.060 [INFO ] [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1d119efb: startup date [Fri Mar 05 16:05:29 EST 2021]; root of context hierarchy
+2021-03-05 16:05:29.878 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 16:05:30.043 [INFO ] [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2021-03-05 16:05:30.133 [INFO ] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fb7b504f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-05 16:05:30.558 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8001 (http)
+2021-03-05 16:05:30.581 [INFO ] [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-05 16:05:30.581 [INFO ] [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-03-05 16:05:30.685 [INFO ] [localhost-startStop-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-05 16:05:30.685 [INFO ] [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1625 ms
+2021-03-05 16:05:30.864 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2021-03-05 16:05:30.866 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2021-03-05 16:05:30.868 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-05 16:05:30.868 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-05 16:05:30.869 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-05 16:05:30.869 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-05 16:05:30.869 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2021-03-05 16:05:30.918 [INFO ] [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-03-05 16:05:31.348 [INFO ] [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-03-05 16:05:31.751 [INFO ] [main] c.halcyon.file_manage.annotations.StartAllJobInit - spring boot started.
+2021-03-05 16:05:32.129 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.login(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2021-03-05 16:05:32.130 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.logout(javax.servlet.http.HttpServletRequest)
+2021-03-05 16:05:32.131 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/material/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.MaterialController.list(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2021-03-05 16:05:32.132 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.update(com.halcyon.file_manage.model.Shelf)
+2021-03-05 16:05:32.132 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 16:05:32.133 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storage/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StorageController.list(java.lang.String)
+2021-03-05 16:05:32.134 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.update(com.halcyon.file_manage.model.Storagedetail)
+2021-03-05 16:05:32.134 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 16:05:32.135 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-05 16:05:32.137 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-05 16:05:32.138 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-05 16:05:32.139 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-05 16:05:32.142 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-05 16:05:32.143 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-05 16:05:32.406 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1d119efb: startup date [Fri Mar 05 16:05:29 EST 2021]; root of context hierarchy
+2021-03-05 16:05:32.446 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:05:32.446 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:05:32.446 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:05:32.468 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:05:32.485 [INFO ] [main] o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-03-05 16:05:32.678 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-03-05 16:05:32.679 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2021-03-05 16:05:32.680 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-05 16:05:32.685 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2021-03-05 16:05:32.686 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2021-03-05 16:05:32.689 [INFO ] [main] o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2021-03-05 16:05:32.690 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-05 16:05:32.712 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-05 16:05:32.725 [INFO ] [main] s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-05 16:05:32.932 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_1
+2021-03-05 16:05:32.944 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_2
+2021-03-05 16:05:32.948 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_3
+2021-03-05 16:05:32.951 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2021-03-05 16:05:32.968 [INFO ] [main] o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-03-05 16:05:32.973 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 16:05:32.996 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8001 (http)
+2021-03-05 16:05:33.000 [INFO ] [main] com.halcyon.file_manage.Application - Started Application in 4.308 seconds (JVM running for 4.617)
+2021-03-05 16:06:18.762 [INFO ] [http-nio-8001-exec-7] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-05 16:06:18.762 [INFO ] [http-nio-8001-exec-7] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-05 16:06:18.778 [INFO ] [http-nio-8001-exec-7] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2021-03-05 16:10:59.826 [INFO ] [main] com.halcyon.file_manage.Application - Starting Application on DEEP-2019PSSVHS with PID 8704 (D:\hr21_work\halycon-file-manger-api\target\classes started by Administrator in D:\hr21_work\halycon-file-manger-api)
+2021-03-05 16:10:59.829 [INFO ] [main] com.halcyon.file_manage.Application - The following profiles are active: dev
+2021-03-05 16:10:59.861 [INFO ] [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1d119efb: startup date [Fri Mar 05 16:10:59 EST 2021]; root of context hierarchy
+2021-03-05 16:11:00.700 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 16:11:00.850 [INFO ] [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2021-03-05 16:11:00.935 [INFO ] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$574c06fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-05 16:11:01.382 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8001 (http)
+2021-03-05 16:11:01.406 [INFO ] [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-05 16:11:01.406 [INFO ] [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-03-05 16:11:01.510 [INFO ] [localhost-startStop-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-05 16:11:01.510 [INFO ] [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1650 ms
+2021-03-05 16:11:01.675 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2021-03-05 16:11:01.676 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2021-03-05 16:11:01.679 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-05 16:11:01.679 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-05 16:11:01.679 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-05 16:11:01.679 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-05 16:11:01.679 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2021-03-05 16:11:01.728 [INFO ] [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-03-05 16:11:02.242 [INFO ] [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-03-05 16:11:02.701 [INFO ] [main] c.halcyon.file_manage.annotations.StartAllJobInit - spring boot started.
+2021-03-05 16:11:03.086 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.login(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2021-03-05 16:11:03.087 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.logout(javax.servlet.http.HttpServletRequest)
+2021-03-05 16:11:03.088 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/material/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.MaterialController.list(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2021-03-05 16:11:03.089 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.update(com.halcyon.file_manage.model.Shelf)
+2021-03-05 16:11:03.089 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 16:11:03.089 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storage/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StorageController.list(java.lang.String)
+2021-03-05 16:11:03.090 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.update(com.halcyon.file_manage.model.Storagedetail)
+2021-03-05 16:11:03.090 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 16:11:03.091 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-05 16:11:03.093 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-05 16:11:03.094 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-05 16:11:03.095 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-05 16:11:03.098 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-05 16:11:03.098 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-05 16:11:03.366 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1d119efb: startup date [Fri Mar 05 16:10:59 EST 2021]; root of context hierarchy
+2021-03-05 16:11:03.406 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:11:03.406 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:11:03.407 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:11:03.429 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:11:03.446 [INFO ] [main] o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-03-05 16:11:03.632 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-03-05 16:11:03.634 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2021-03-05 16:11:03.634 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-05 16:11:03.638 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2021-03-05 16:11:03.639 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2021-03-05 16:11:03.642 [INFO ] [main] o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2021-03-05 16:11:03.642 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-05 16:11:03.659 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-05 16:11:03.669 [INFO ] [main] s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-05 16:11:03.853 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_1
+2021-03-05 16:11:03.864 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_2
+2021-03-05 16:11:03.868 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_3
+2021-03-05 16:11:03.871 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2021-03-05 16:11:03.887 [INFO ] [main] o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-03-05 16:11:03.891 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 16:11:03.915 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8001 (http)
+2021-03-05 16:11:03.919 [INFO ] [main] com.halcyon.file_manage.Application - Started Application in 4.41 seconds (JVM running for 4.7)
+2021-03-05 16:11:13.234 [INFO ] [http-nio-8001-exec-3] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-05 16:11:13.235 [INFO ] [http-nio-8001-exec-3] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-05 16:11:13.255 [INFO ] [http-nio-8001-exec-3] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2021-03-05 16:11:59.733 [INFO ] [main] com.halcyon.file_manage.Application - Starting Application on DEEP-2019PSSVHS with PID 3732 (D:\hr21_work\halycon-file-manger-api\target\classes started by Administrator in D:\hr21_work\halycon-file-manger-api)
+2021-03-05 16:11:59.739 [INFO ] [main] com.halcyon.file_manage.Application - The following profiles are active: dev
+2021-03-05 16:11:59.831 [INFO ] [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 16:11:59 EST 2021]; root of context hierarchy
+2021-03-05 16:12:00.840 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-05 16:12:01.095 [INFO ] [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2021-03-05 16:12:01.246 [INFO ] [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$50d943ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-05 16:12:01.867 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8001 (http)
+2021-03-05 16:12:01.901 [INFO ] [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-03-05 16:12:01.902 [INFO ] [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+2021-03-05 16:12:02.065 [INFO ] [localhost-startStop-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-03-05 16:12:02.066 [INFO ] [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2235 ms
+2021-03-05 16:12:02.299 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2021-03-05 16:12:02.300 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2021-03-05 16:12:02.304 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-03-05 16:12:02.305 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-03-05 16:12:02.305 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-03-05 16:12:02.305 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2021-03-05 16:12:02.305 [INFO ] [localhost-startStop-1] o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2021-03-05 16:12:02.387 [INFO ] [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-03-05 16:12:02.944 [INFO ] [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-03-05 16:12:03.536 [INFO ] [main] c.halcyon.file_manage.annotations.StartAllJobInit - spring boot started.
+2021-03-05 16:12:04.154 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.login(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2021-03-05 16:12:04.155 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.LoginController.logout(javax.servlet.http.HttpServletRequest)
+2021-03-05 16:12:04.156 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/material/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.MaterialController.list(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+2021-03-05 16:12:04.157 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.update(com.halcyon.file_manage.model.Shelf)
+2021-03-05 16:12:04.158 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shelf/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.ShelfController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 16:12:04.159 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storage/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StorageController.list(java.lang.String)
+2021-03-05 16:12:04.160 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/update],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.update(com.halcyon.file_manage.model.Storagedetail)
+2021-03-05 16:12:04.160 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/storagedetail/list],methods=[POST]}" onto public com.halcyon.file_manage.core.Result com.halcyon.file_manage.web.StoragedetailController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2021-03-05 16:12:04.161 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-03-05 16:12:04.165 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-03-05 16:12:04.167 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-03-05 16:12:04.167 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-03-05 16:12:04.171 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2021-03-05 16:12:04.172 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-03-05 16:12:04.610 [INFO ] [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a37aefe: startup date [Fri Mar 05 16:11:59 EST 2021]; root of context hierarchy
+2021-03-05 16:12:04.679 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/swagger-ui.html] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:12:04.680 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:12:04.680 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:12:04.725 [INFO ] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-03-05 16:12:04.753 [INFO ] [main] o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2021-03-05 16:12:05.201 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2021-03-05 16:12:05.205 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2021-03-05 16:12:05.205 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-03-05 16:12:05.212 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2021-03-05 16:12:05.213 [INFO ] [main] o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2021-03-05 16:12:05.216 [INFO ] [main] o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2021-03-05 16:12:05.216 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-03-05 16:12:05.317 [INFO ] [main] s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-03-05 16:12:05.334 [INFO ] [main] s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-03-05 16:12:05.674 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_1
+2021-03-05 16:12:05.689 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_2
+2021-03-05 16:12:05.692 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingPOST_3
+2021-03-05 16:12:05.696 [INFO ] [main] s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2021-03-05 16:12:05.715 [INFO ] [main] o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-03-05 16:12:05.720 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-05 16:12:05.758 [INFO ] [main] o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8001 (http)
+2021-03-05 16:12:05.771 [INFO ] [main] com.halcyon.file_manage.Application - Started Application in 6.499 seconds (JVM running for 7.145)
+2021-03-05 16:12:21.082 [INFO ] [http-nio-8001-exec-2] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-03-05 16:12:21.082 [INFO ] [http-nio-8001-exec-2] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2021-03-05 16:12:21.104 [INFO ] [http-nio-8001-exec-2] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2021-03-05 16:14:05.722 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.

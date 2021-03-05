@@ -20,6 +20,8 @@ import com.halcyon.file_manage.core.Result;
 import com.halcyon.file_manage.core.ResultCode;
 import com.halcyon.file_manage.core.ServiceException;
 
+import cn.hutool.core.util.StrUtil;
+
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -109,13 +111,12 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 	// 添加拦截器
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		
+
 		// 注册权限拦截器
-	     registry.addInterceptor(new AuthorityInterceptor()).addPathPatterns("/api/**");
-		
-		// 如果启用了SWAGGER  需要验证
-	     
-	     
+		registry.addInterceptor(new AuthorityInterceptor()).addPathPatterns("/api/**");
+
+		// 如果启用了SWAGGER 需要验证
+
 		// 接口签名认证拦截器，该签名认证比较简单，实际项目中可以使用Json Web Token或其他更好的方式替代。
 		if (!"dev".equals(env)) { // 开发环境忽略签名认证
 			registry.addInterceptor(new HandlerInterceptorAdapter() {
@@ -137,59 +138,54 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 					}
 				}
 			});
-		}else {
-			//  简单加密
+		} else {
+			// 简单认证
+			// 简单加密
 			
 			registry.addInterceptor(new HandlerInterceptorAdapter() {
 				@Override
 				public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 						throws Exception {
-					// 验证签名
-					String requestSign = request.getParameter("sign");// 获得请求签名，如sign=19e907700db7ad91318424a97c54ed57
 					/*
+					 * // 验证签名 String requestSign = request.getParameter("sign");//
+					 * 获得请求签名，如sign=19e907700db7ad91318424a97c54ed57
+					 * 
 					 * if (StringUtils.isEmpty(requestSign)) { return false; }
+					 * 
+					 * //http://www.jsphp.net/uploadfile/js/md5.rar //300秒修改一次 // str1 =
+					 * hex_md5(parseInt( new Date().getTime() /300000 )+"PWD_STR"); long
+					 * currentTimeMillis = System.currentTimeMillis()/300000; String md5Hex =
+					 * DigestUtils.md5Hex(String.valueOf(currentTimeMillis) + PWD_STR);
+					 * 
+					 * System.out.println("currentTimeMillis:"+ currentTimeMillis);
+					 * System.out.println("md5Hex:"+ md5Hex); System.out.println("requestSign:"+
+					 * requestSign); return md5Hex.equalsIgnoreCase(requestSign);
+					 * 
 					 */
-					//http://www.jsphp.net/uploadfile/js/md5.rar
-					//300秒修改一次
-					// str1 = hex_md5(parseInt( new Date().getTime() /300000 )+"PWD_STR");
-					long currentTimeMillis = System.currentTimeMillis()/300000;
-					String md5Hex = DigestUtils.md5Hex(String.valueOf(currentTimeMillis) + PWD_STR);
+					 String path = request.getServletPath();
+					 if ( !StrUtil.startWith(path, "/api/")) {
+						return  true;
+					}
 					
-					System.out.println("currentTimeMillis:"+  currentTimeMillis);
-					System.out.println("md5Hex:"+  md5Hex);
-					System.out.println("requestSign:"+  requestSign);
-					return true;
+					Object attribute = request.getSession().getAttribute("sign");
+					if( attribute ==null) {
+						Result result = new Result();
+						result.setCode(ResultCode.UNAUTHORIZED).setMessage("签名认证失败");
+						responseResult(response, result);
+						return false;
+					}else {
+						return true;
+					}
+					 
 					
-					
-//					if (md5Hex.equalsIgnoreCase(requestSign)) {
-//						return true;
-//					} else {
-//						logger.warn("签名认证失败，请求接口：{}，请求IP：{}，请求参数：{}", request.getRequestURI(), getIpAddress(request),
-//								JSON.toJSONString(request.getParameterMap()));
-//
-//						Result result = new Result();
-//						result.setCode(ResultCode.UNAUTHORIZED).setMessage("签名认证失败");
-//						responseResult(response, result);
-//						return true;
-//					}
 				}
 			});
-			
-			
 
 //			DigestUtils.
-			
-			
-			
+
 		}
-		
-	
-		
-		
+
 	}
-	
-	
-	
 
 	private void responseResult(HttpServletResponse response, Result result) {
 		response.setCharacterEncoding("UTF-8");
@@ -252,30 +248,26 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 
 		return ip;
 	}
-	
+
 	/**
 	 * 加载额外的页面资源 给SPRING mvc for Swagger
 	 */
 	@Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-    	
-    	super.addResourceHandlers(registry);
-      registry.addResourceHandler("swagger-ui.html")
-      .addResourceLocations("classpath:/META-INF/resources/");
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
-      registry.addResourceHandler("/webjars/**")
-      .addResourceLocations("classpath:/META-INF/resources/webjars/");
-    	
-    	
-    }
-	
-	
+		super.addResourceHandlers(registry);
+		registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
+
+		registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+
+	}
+
 	public static void main(String[] args) {
-		
-		long currentTimeMillis = System.currentTimeMillis()/300000;
-		System.out.println("currentTimeMillis:"+ currentTimeMillis);
-		
-		String md5Hex = DigestUtils.md5Hex(String.valueOf(currentTimeMillis)+ PWD_STR);
+
+		long currentTimeMillis = System.currentTimeMillis() / 300000;
+		System.out.println("currentTimeMillis:" + currentTimeMillis);
+
+		String md5Hex = DigestUtils.md5Hex(String.valueOf(currentTimeMillis) + PWD_STR);
 		System.out.println(md5Hex);
 	}
 
