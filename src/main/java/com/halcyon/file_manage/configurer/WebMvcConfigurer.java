@@ -30,6 +30,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerExceptionResolver;
+import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -43,7 +44,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
  */
 @Configuration
 public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
-
+	private static final String PWD_STR = "ATS_3D";
 	private final Logger logger = LoggerFactory.getLogger(WebMvcConfigurer.class);
 	@Value("${spring.profiles.active}")
 	private String env;// 当前激活的配置文件
@@ -112,7 +113,9 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 		// 注册权限拦截器
 	     registry.addInterceptor(new AuthorityInterceptor()).addPathPatterns("/api/**");
 		
-		
+		// 如果启用了SWAGGER  需要验证
+	     
+	     
 		// 接口签名认证拦截器，该签名认证比较简单，实际项目中可以使用Json Web Token或其他更好的方式替代。
 		if (!"dev".equals(env)) { // 开发环境忽略签名认证
 			registry.addInterceptor(new HandlerInterceptorAdapter() {
@@ -134,12 +137,59 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 					}
 				}
 			});
+		}else {
+			//  简单加密
+			
+			registry.addInterceptor(new HandlerInterceptorAdapter() {
+				@Override
+				public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+						throws Exception {
+					// 验证签名
+					String requestSign = request.getParameter("sign");// 获得请求签名，如sign=19e907700db7ad91318424a97c54ed57
+					/*
+					 * if (StringUtils.isEmpty(requestSign)) { return false; }
+					 */
+					//http://www.jsphp.net/uploadfile/js/md5.rar
+					//300秒修改一次
+					// str1 = hex_md5(parseInt( new Date().getTime() /300000 )+"PWD_STR");
+					long currentTimeMillis = System.currentTimeMillis()/300000;
+					String md5Hex = DigestUtils.md5Hex(String.valueOf(currentTimeMillis) + PWD_STR);
+					
+					System.out.println("currentTimeMillis:"+  currentTimeMillis);
+					System.out.println("md5Hex:"+  md5Hex);
+					System.out.println("requestSign:"+  requestSign);
+					return true;
+					
+					
+//					if (md5Hex.equalsIgnoreCase(requestSign)) {
+//						return true;
+//					} else {
+//						logger.warn("签名认证失败，请求接口：{}，请求IP：{}，请求参数：{}", request.getRequestURI(), getIpAddress(request),
+//								JSON.toJSONString(request.getParameterMap()));
+//
+//						Result result = new Result();
+//						result.setCode(ResultCode.UNAUTHORIZED).setMessage("签名认证失败");
+//						responseResult(response, result);
+//						return true;
+//					}
+				}
+			});
+			
+			
+
+//			DigestUtils.
+			
+			
+			
 		}
 		
 	
 		
 		
 	}
+	
+	
+	
 
 	private void responseResult(HttpServletResponse response, Result result) {
 		response.setCharacterEncoding("UTF-8");
@@ -218,5 +268,15 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
     	
     	
     }
+	
+	
+	public static void main(String[] args) {
+		
+		long currentTimeMillis = System.currentTimeMillis()/300000;
+		System.out.println("currentTimeMillis:"+ currentTimeMillis);
+		
+		String md5Hex = DigestUtils.md5Hex(String.valueOf(currentTimeMillis)+ PWD_STR);
+		System.out.println(md5Hex);
+	}
 
 }

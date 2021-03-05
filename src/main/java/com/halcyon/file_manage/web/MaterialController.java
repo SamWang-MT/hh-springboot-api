@@ -30,7 +30,7 @@ public class MaterialController {
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@PostMapping("/list")
 	public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size,
-			@RequestParam String storageBin) {
+			@RequestParam String storageBin , @RequestParam String sign  ) {
 
 		if (StrUtil.isBlankIfStr(storageBin)) {
 			return ResultGenerator.genFailResult("请求参数空.");
