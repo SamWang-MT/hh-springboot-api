@@ -46,12 +46,12 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
  */
 @Configuration
 public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
-	private static final String PWD_STR = "ATS_3D";
+//	private static final String PWD_STR = "ATS_3D";
 	private final Logger logger = LoggerFactory.getLogger(WebMvcConfigurer.class);
 	@Value("${spring.profiles.active}")
 	private String env;// 当前激活的配置文件
 
-	// 使用阿里 FastJson 作为JSON MessageConverter
+	//  FastJson 作为JSON MessageConverter
 	@Override
 	public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
 		FastJsonHttpMessageConverter converter = new FastJsonHttpMessageConverter();
@@ -59,7 +59,6 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 		config.setSerializerFeatures(SerializerFeature.WriteMapNullValue);// 保留空的字段
 		// SerializerFeature.WriteNullStringAsEmpty,//String null -> ""
 		// SerializerFeature.WriteNullNumberAsZero//Number null -> 0
-		// 按需配置，更多参考FastJson文档哈
 
 		converter.setFastJsonConfig(config);
 		converter.setDefaultCharset(Charset.forName("UTF-8"));
@@ -141,7 +140,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 		} else {
 			// 简单认证
 			// 简单加密
-			
+
 			registry.addInterceptor(new HandlerInterceptorAdapter() {
 				@Override
 				public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
@@ -162,26 +161,23 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 					 * requestSign); return md5Hex.equalsIgnoreCase(requestSign);
 					 * 
 					 */
-					 String path = request.getServletPath();
-					 if ( !StrUtil.startWith(path, "/api/")) {
-						return  true;
+					String path = request.getServletPath();
+					if (!StrUtil.startWith(path, "/api/")) {
+						return true;
 					}
-					
+
 					Object attribute = request.getSession().getAttribute("sign");
-					if( attribute ==null) {
+					if (attribute == null) {
 						Result result = new Result();
 						result.setCode(ResultCode.UNAUTHORIZED).setMessage("签名认证失败");
 						responseResult(response, result);
 						return false;
-					}else {
+					} else {
 						return true;
 					}
-					 
-					
+
 				}
 			});
-
-//			DigestUtils.
 
 		}
 
@@ -245,7 +241,6 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 		if (ip != null && ip.indexOf(",") != -1) {
 			ip = ip.substring(0, ip.indexOf(",")).trim();
 		}
-
 		return ip;
 	}
 
@@ -254,21 +249,19 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 	 */
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-
 		super.addResourceHandlers(registry);
 		registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
-
 		registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
-
 	}
 
-	public static void main(String[] args) {
-
-		long currentTimeMillis = System.currentTimeMillis() / 300000;
-		System.out.println("currentTimeMillis:" + currentTimeMillis);
-
-		String md5Hex = DigestUtils.md5Hex(String.valueOf(currentTimeMillis) + PWD_STR);
-		System.out.println(md5Hex);
-	}
+	/*
+	 * public static void main(String[] args) {
+	 * 
+	 * long currentTimeMillis = System.currentTimeMillis() / 300000;
+	 * System.out.println("currentTimeMillis:" + currentTimeMillis);
+	 * 
+	 * String md5Hex = DigestUtils.md5Hex(String.valueOf(currentTimeMillis) +
+	 * PWD_STR); System.out.println(md5Hex); }
+	 */
 
 }

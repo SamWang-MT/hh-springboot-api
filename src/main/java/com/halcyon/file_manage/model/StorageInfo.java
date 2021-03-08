@@ -15,6 +15,18 @@ public class StorageInfo extends Chemicalwmstock {
 
 	private String chemicalBrand;
 	private String dOCLink;
+	// 物料建议仓库位置
+	private String storageLocation;
+	
+	
+
+	public String getStorageLocation() {
+		return storageLocation;
+	}
+
+	public void setStorageLocation(String storageLocation) {
+		this.storageLocation = storageLocation;
+	}
 
 	public String getChemicalBrand() {
 		return chemicalBrand;
@@ -67,6 +79,7 @@ public class StorageInfo extends Chemicalwmstock {
 				this.chemicalBrand = chemicalbrand2;
 			}
 			this.dOCLink = materal.getDoclink();
+			this.storageLocation = materal.getStorageLocation();
 		}
 	}
 

@@ -19,4 +19,6 @@ public interface MaterialService  {
 	
 	List<Shelf> listSelfByStorageId (String storageId);
 	
+	List<StorageInfo> listAbnormalPosition ();
+	
 }

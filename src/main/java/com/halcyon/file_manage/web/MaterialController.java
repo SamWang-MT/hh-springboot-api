@@ -27,10 +27,10 @@ public class MaterialController {
 	@Resource
 	private MaterialService materialService;
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@SuppressWarnings({ "rawtypes" })
 	@PostMapping("/list")
 	public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size,
-			@RequestParam String storageBin , @RequestParam String sign  ) {
+			@RequestParam String storageBin) {
 
 		if (StrUtil.isBlankIfStr(storageBin)) {
 			return ResultGenerator.genFailResult("请求参数空.");
@@ -40,13 +40,25 @@ public class MaterialController {
 		List<StorageInfo> list = materialService.listMaterialsByStorageBin(storageBin.trim());
 //		startPage.add(list);
 		/*
-        PageInfo<StorageInfo> pageInfo = null;
-		 * if (page == 0 ||size == 0 ) { pageInfo = new PageInfo<StorageInfo>(list);
-		 * }else { pageInfo = PageInfoUtils.list2PageInfo(list, page, size);
+		 * PageInfo<StorageInfo> pageInfo = null; if (page == 0 ||size == 0 ) { pageInfo
+		 * = new PageInfo<StorageInfo>(list); }else { pageInfo =
+		 * PageInfoUtils.list2PageInfo(list, page, size);
 		 * 
 		 * }
 		 */
-		return ResultGenerator.genSuccessResult(list,page,size);
+		return ResultGenerator.genSuccessResult(list, page, size);
+	}
+
+	@SuppressWarnings({ "rawtypes" })
+	@PostMapping("/listAbnormal")
+	public Result listAbnormal(@RequestParam(defaultValue = "0") Integer page,
+			@RequestParam(defaultValue = "0") Integer size) {
+
+		// materialsService.findByCondition();
+//		Page<Object> startPage = PageHelper.startPage(page, size);
+		List<StorageInfo> list = materialService.listAbnormalPosition();
+
+		return ResultGenerator.genSuccessResult(list, page, size);
 	}
 
 }

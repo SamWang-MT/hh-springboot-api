@@ -22,6 +22,12 @@ public class Chemicalwmnotes {
      */
     @Column(name = "DOCLink")
     private String doclink;
+    
+    /**
+     * 建议仓库说明
+     */
+    @Column(name = "StorageLocation")
+    private String storageLocation;
 
     /**
      * 获取物料号
@@ -32,7 +38,16 @@ public class Chemicalwmnotes {
         return materialno;
     }
 
-    /**
+    
+    public String getStorageLocation() {
+		return storageLocation;
+	}
+
+	public void setStorageLocation(String storageLocation) {
+		this.storageLocation = storageLocation;
+	}
+
+	/**
      * 设置物料号
      *
      * @param materialno 物料号

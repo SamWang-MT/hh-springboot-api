@@ -156,4 +156,11 @@ public class Chemicalwmstock {
     public void setDescription(String description) {
         this.description = description;
     }
+
+	@Override
+	public String toString() {
+		return "Chemicalwmstock [id=" + id + ", storagebin=" + storagebin + ", materialno=" + materialno + "]";
+	}
+    
+    
 }
