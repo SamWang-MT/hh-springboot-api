@@ -14,3 +14,7 @@
 2021-03-08 21:12:36.732 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
 2021-03-08 21:14:36.735 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
 2021-03-08 21:16:36.737 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-08 21:37:47.432 [WARN ] [main] o.s.c.annotation.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'mybatisConfigurer' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-03-08 21:37:51.806 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-08 21:39:51.779 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
+2021-03-08 21:41:51.781 [WARN ] [pool-1-thread-1] com.halcyon.file_manage.task.TimedTasks - taskJob-REFRSH DB.
