@@ -24,18 +24,29 @@ import cn.hutool.core.util.StrUtil;
 @RestController
 //@RequestMapping("/login")
 public class LoginController {
-	@Value("${login.verification}")
-	private   String NAME_PWD;
+	
+//			login.verification.query=user123
+//			login.verification.admin=adminats123
+	
+	@Value("${login.verification.query}")
+	private   String USER_PWD;
+	@Value("${login.verification.admin}")
+	private   String ADMIN_PWD;
 
 	@SuppressWarnings("rawtypes")
 	@PostMapping("/login")
 	public Result login(HttpServletRequest request, @RequestParam(defaultValue = "") String userName,
 			@RequestParam(defaultValue = "") String pwd) {
-
-		if (StrUtil.isBlankIfStr(userName) || StrUtil.isBlankIfStr(pwd) || !(NAME_PWD.equals(userName + pwd))) {
+		request.getSession().setAttribute("sign", null);
+		
+		if (StrUtil.isBlankIfStr(userName) || StrUtil.isBlankIfStr(pwd) ||
+				!((USER_PWD.equals(userName + pwd) ||ADMIN_PWD.equals(userName + pwd) ))) {
 			return ResultGenerator.genFailResult("登陆失败");
 		} else {
-			request.getSession().setAttribute("sign", NAME_PWD);
+			request.getSession().setAttribute("sign", "userName");
+			if (ADMIN_PWD.equals(userName + pwd)) {
+				request.getSession().setAttribute("sign", "ADMIN");
+			}
 		}
 		return ResultGenerator.genSuccessResult();
 	}

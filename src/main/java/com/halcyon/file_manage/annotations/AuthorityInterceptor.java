@@ -68,7 +68,7 @@ public class AuthorityInterceptor implements HandlerInterceptor {
 
 		if (!isSuccess) {
 			Result result = new Result();
-			result.setCode(ResultCode.UNAUTHORIZED).setMessage("认证失败");
+			result.setCode(ResultCode.UN_LOGIN).setMessage("认证失败");
 			responseResult(response, result);
 
 		}

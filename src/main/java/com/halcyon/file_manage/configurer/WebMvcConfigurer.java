@@ -131,7 +131,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 								JSON.toJSONString(request.getParameterMap()));
 
 						Result result = new Result();
-						result.setCode(ResultCode.UNAUTHORIZED).setMessage("签名认证失败");
+						result.setCode(ResultCode.UN_LOGIN).setMessage("签名认证失败");
 						responseResult(response, result);
 						return false;
 					}
@@ -166,13 +166,19 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 						return true;
 					}
 
+					Result result = new Result();
 					Object attribute = request.getSession().getAttribute("sign");
 					if (attribute == null) {
-						Result result = new Result();
-						result.setCode(ResultCode.UNAUTHORIZED).setMessage("签名认证失败");
+						
+						result.setCode(ResultCode.UN_LOGIN).setMessage("未登陆，请登陆。");
 						responseResult(response, result);
 						return false;
-					} else {
+					} else if( attribute != null &&  StrUtil.contains(path, "/update")
+							&&  !attribute.toString().equals("ADMIN")   ) {
+						result.setCode(ResultCode.NO_AUTHORIZED).setMessage("没有操作权限，请以管理员身份登陆");
+						responseResult(response, result);
+						return false;
+					}else {
 						return true;
 					}
 
